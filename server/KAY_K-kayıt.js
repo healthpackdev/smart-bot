@@ -64,10 +64,11 @@ if(member) {
 if(isim ||düzen.includes("{username}")) {
   
   if(düzen){
-    
+    if(düzen.includes("{yas}") && !yaş) yaş = "0";
     const replce = düzen.replace(`{isim}`,`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()}`).replace(`{yas}`,`${yaş}`).replace(`{username}`,`${member.user.username}`) 
     member.setNickname(replce)
   } else {
+    if(!yaş} yaş = "0"
 member.setNickname(`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()} ${yaş}`)
   }
 }
