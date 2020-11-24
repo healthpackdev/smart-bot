@@ -6,7 +6,7 @@ exports.run = async(client, message, args,p,data) => {
 const embed1 = new Discord.MessageEmbed().setAuthor(message.author.username).setDescription(`
  **Bu mesajdan sonra 30 saniye içinde isim-yaş düzenini söyle**
 
- Değişkenler : {isim} / {yas} / {username}
+ Değişkenler : {isim} / {yas}
  Örnek :  主 {isim} | {yas}
 
 **Şeklinde yazarsan kayıt sırasında bu şekilde kayıt eder**
