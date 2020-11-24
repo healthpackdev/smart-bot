@@ -10,7 +10,7 @@ let kayıtsız = docs.Karol
 let kayıtkanal = docs.Kkanal
 let ekstra = docs.Ekrol
 let aktiflik = docs.aktiflik
-let düzen = docs.Idüzen
+let düzen = docs.Idüzen 
 let zorunlu = docs.Izorun
 
 const embed1 = new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | Kayıt Sistemi tamamen ayarlanmamış! nelerin ayarlanmadığına bakmak için:\n ``'+p+'kontrol kayıt``').setColor(open.embedFalse)
@@ -62,10 +62,10 @@ if(!isim && !yaş && zorunlu) return message.channel.send(embed7)
    if(isim && isim.length > 20) return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
   if(yaş && yaş.length > 4)return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
 if(member) {
-if(isim || düzen.includes("{username}")) {
-  
+if(isim) {
+ 
   if(düzen){
-    if(düzen.includes('{yas}') && !yaş) yaş == "0"
+    if(düzen.includes('{yas}') && !yaş) yaş = "0"
   
     const replce = düzen.replace(`{isim}`,`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()}`).replace(`{yas}`,`${yaş}`).replace(`{username}`,`${member.user.username}`) 
     member.setNickname(replce)
