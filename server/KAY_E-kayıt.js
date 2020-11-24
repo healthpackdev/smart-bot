@@ -1,0 +1,108 @@
+const Discord = require('discord.js')
+const open = require('../open.json')
+const KayıtŞema = require('../database/şema/kayıt.js')
+exports.run = async(client, message, args,p,data) => {
+  
+let docs = await data.findOne({sunucu : message.guild.id})
+let erkek = docs.Erol
+let yetkili = docs.Yrol
+let kayıtsız = docs.Karol
+let kayıtkanal = docs.Kkanal
+let ekstra = docs.Ekrol
+let aktiflik = docs.aktiflik
+let düzen = docs.Idüzen
+let zorunlu = docs.Izorun
+
+const embed1 = new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | Kayıt Sistemi tamamen ayarlanmamış! nelerin ayarlanmadığına bakmak için:\n ``'+p+'kontrol kayıt``').setColor(open.embedFalse)
+if(!erkek || !yetkili || !kayıtsız || !kayıtkanal) return message.channel.send(embed1)
+let teyit1 = message.guild.roles.cache.get(erkek)
+let teyit2 = message.guild.roles.cache.get(yetkili)
+let teyit3 = message.guild.channels.cache.get(kayıtkanal)
+let teyit4 = message.guild.roles.cache.get(kayıtsız)
+let teyit5 = message.guild.roles.cache.get(ekstra)
+let resim = "https://cdn.discordapp.com/emojis/769202829817937970.gif?v=1"
+if(!teyit1) return message.channel.send('Ayarlanan Erkek rolü Sunucuda yok').then(a => a.delete({timeout : "5000"}))
+if(!teyit2) return message.channel.send('Ayarlanan Yetkili rolü Sunucuda yok').then(a => a.delete({timeout : "5000"}))
+if(!teyit3) return message.channel.send('Ayarlanan Kayıt kanalı  Sunucuda yok').then(a => a.delete({timeout : "5000"}))
+if(!teyit4) return message.channel.send('Ayarlanan kayıtsız rolü Sunucuda yok').then(a => a.delete({timeout : "5000"}))
+if(!teyit5&ekstra) return message.channel.send('Ayarlanan Esktra rol Sunucuda yok').then(a => a.delete({timeout : "5000"}))
+  
+if(teyit1.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit1} Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
+  if(teyit4.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit4} Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
+  if(teyit5.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit5} Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
+  
+const embed2 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Yanlış Kanaldasın burası Kayıt kanalı değil <#${kayıtkanal}> İşte Burası Kayıt kanalı`).setColor(open.embedFalse)
+const embed3 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Birini Kayıt edebilmek için bu sunucudaki <@&${yetkili}> Rolüne Sahip Olmalısın`).setColor(open.embedFalse)
+const embed4 = new Discord.MessageEmbed().setAuthor('Hata...','https://cdn.discordapp.com/emojis/769202870612131840.gif?v=1').setDescription(`Bir Kullanıcı **Etiketlemelisin** veya **ID** Girmelisin.`).addField('Örnek:',`\`\`\`
+${p}e <@etiket/ID> <isim-yaş>
+${p}e <@etiket/ID>
+\`\`\``).setColor('BLUE')
+const embed6 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | kayıt edilcek kişi <@&${kayıtsız}> Rolüne sahip olmalı`).setColor(open.embedFalse)
+
+
+if(!message.member.roles.cache.has(yetkili)) return message.channel.send(embed3)
+if(message.channel.id !== kayıtkanal) return message.channel.send(embed2)
+
+  
+let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
+if(!member)return message.channel.send(embed4)
+  if(!member.roles.cache.has(kayıtsız)) return message.channel.send(embed6)
+let isim = args[1]
+let yaş = args[2]
+
+const embed5 = new Discord.MessageEmbed().setAuthor('[ Kayıt Başarılı ]',resim).setDescription(`
+**<:erkek:769607582238900254> - <@${member.id}> Kaydı ${message.author.toString()} Tarafından Yapıldı!**
+\`\`\`diff
++ ${isim ? isim : member.user.username} - Sunucuya Hoşgeldin 🤗
+\`\`\`
+**${member}, Kullanıcıya <@&${erkek}> Rolü Verildi.**
+`).setThumbnail(member.user.avatarURL({format : "png", dynamic : true})).setColor('#006aff')
+const embed7 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | **İsim Zorunluluğu Ayarlanmış İsim Yaş girmelisin**.\n\n \`!e @etiket İsim Yaş\` `).setColor(open.embedFalse)
+if(!isim && !yaş && zorunlu) return message.channel.send(embed7)
+if(member) {
+if(isim || düzen.includes("{username}")) {
+  
+  if(düzen){
+    if(düzen.includes('{yas}') && !yaş) yaş == "0"
+  
+    const replce = düzen.replace(`{isim}`,`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()}`).replace(`{yas}`,`${yaş}`).replace(`{username}`,`${member.user.username}`) 
+    member.setNickname(replce)
+  } else {
+    if(!yaş) yaş = ""
+member.setNickname(`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()} ${yaş}`)
+  }
+}
+
+if(teyit5) {
+  member.roles.add(ekstra)
+}
+ if(aktiflik) {
+let kayıtSchema = new KayıtŞema({
+  Guild : message.guild.id,
+  MM : member.id,
+  User : `**${member.user.tag}**(\`${member.id}\`)`,
+  Owner : message.author.id,
+  Gender : "<:erkek:769607582238900254>",
+  Name : `${member.nickname}`
+})
+await kayıtSchema.save()
+ }
+  member.roles.add(erkek)
+  member.roles.remove(kayıtsız)
+  message.channel.send(embed5)
+}
+
+}
+               
+exports.help = {
+    name : "e-kayıt",
+    aliases : ['e','erkek'],
+    open : true,
+    perm : "no",
+    limit : "0"
+   
+}
+exports.play = {
+    usage : "e @etiket / s!e @etiket İsim Yaş",
+    description : "Kayıt Sİstemi Erkek Kayıt komutu"
+}
