@@ -29,9 +29,9 @@ if(!teyit3) return message.channel.send('Ayarlanan Kayıt kanalı  Sunucuda yok'
 if(!teyit4) return message.channel.send('Ayarlanan kayıtsız rolü Sunucuda yok').then(a => a.delete({timeout : "5000"}))
 if(!teyit5&&ekstra) return message.channel.send('Ayarlanan Esktra rol Sunucuda yok').then(a => a.delete({timeout : "5000"}))
   
-  if(teyit1.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit1}, Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
-  if(teyit4.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit4}, Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
-  if(teyit5.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit5}, Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
+  if(teyit1 && teyit1.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit1}, Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
+  if(teyit4 && teyit4.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit4}, Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
+  if(teyit5 && teyit5.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit5}, Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
   
 const embed2 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Yanlış Kanaldasın burası Kayıt kanalı değil <#${kayıtkanal}> İşte Burası Kayıt kanalı`).setColor(open.embedFalse)
 const embed3 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Birini Kayıt edebilmek için bu sunucudaki <@&${yetkili}> Rolüne Sahip Olmalısın`).setColor(open.embedFalse)
@@ -57,6 +57,7 @@ const embed5 = new Discord.MessageEmbed().setAuthor('[ Kayıt Başarılı ]',res
 `).setThumbnail(member.user.avatarURL({format : "png", dynamic : true})).setColor('#af00f5')
 const embed7 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | **İsim Zorunluluğu Ayarlanmış İsim Yaş girmelisin**.\n\n \`!k @etiket İsim Yaş\` `).setColor(open.embedFalse)
 if(!isim && !yaş && zorunlu) return message.channel.send(embed7)
+  if(isim.length > 20 || yaş.length > 4) return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
 
 if(member) {
   
