@@ -3,7 +3,7 @@ const open = require('../open.json')
 
 exports.run = async(client, message, args,p,data) => {
 data.findOne({sunucu : message.guild.id},function(err,doce){
-let role = message.mentions.roles.first()| message.guild.roles.cache.get(args[0])
+let role = message.mentions.roles.first()|| message.guild.roles.cache.get(args[0])
 const embed1 = new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | Kayıt ``Kayıtsız`` Rolünü Ayarlamam İçin ``@Kayıtsız`` rolünü **@etiketle**!').setColor(open.embedFalse)
 if(role) {
 
