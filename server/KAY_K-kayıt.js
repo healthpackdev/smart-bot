@@ -61,11 +61,11 @@ if(!isim && !yaş && zorunlu) return message.channel.send(embed7)
   if(yaş && yaş.length > 4)return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
 if(member) {
   
-if(isim ||düzen.includes("{username}")) {
+if(isim) {
   
   if(düzen){
     if(düzen.includes("{yas}") && !yaş) yaş = "0";
-    const replce = düzen.replace(`{isim}`,`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()}`).replace(`{yas}`,`${yaş}`).replace(`{username}`,`${member.user.username}`) 
+    const replce = düzen.replace(`{isim}`,`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()}`).replace(`{yas}`,`${yaş}`)
     member.setNickname(replce)
   } else {
     if(!yaş) yaş = "0"
