@@ -15,7 +15,7 @@ app.get("/", (request, response) => {
   console.log(Date.now() + "7/24 AKTİF TUTMA İŞLEMİ BAŞARILI H.O");
   response.sendStatus(200);
 });
-app.listen('3000');
+app.listen(process.env.PORT || 3000);
 
 
 
