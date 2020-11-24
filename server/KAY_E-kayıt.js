@@ -67,7 +67,7 @@ if(isim) {
   if(düzen){
     if(düzen.includes('{yas}') && !yaş) yaş = "0"
   
-    const replce = düzen.replace(`{isim}`,`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()}`).replace(`{yas}`,`${yaş}`).replace(`{username}`,`${member.user.username}`) 
+    const replce = düzen.replace(`{isim}`,`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()}`).replace(`{yas}`,`${yaş}`)
     member.setNickname(replce)
   } else {
     if(!yaş) yaş = ""
