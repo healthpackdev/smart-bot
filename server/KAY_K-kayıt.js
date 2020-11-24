@@ -57,8 +57,8 @@ const embed5 = new Discord.MessageEmbed().setAuthor('[ Kayıt Başarılı ]',res
 `).setThumbnail(member.user.avatarURL({format : "png", dynamic : true})).setColor('#af00f5')
 const embed7 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | **İsim Zorunluluğu Ayarlanmış İsim Yaş girmelisin**.\n\n \`!k @etiket İsim Yaş\` `).setColor(open.embedFalse)
 if(!isim && !yaş && zorunlu) return message.channel.send(embed7)
-  if(isim.length > 20 || yaş.length > 4) return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
-
+  if(isim && isim.length > 20) return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
+  if(yaş && yaş.length > 4)return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
 if(member) {
   
 if(isim ||düzen.includes("{username}")) {
