@@ -19,7 +19,7 @@ if(!c.resimli) return client.sendFalse('Resimli Hg BB zaten ayarlanmamış')
   const resim = new Discord.MessageEmbed().setTitle('Resimli HG BB Sistemi').setURL('https://discord.com/api/oauth2/authorize?client_id=769110620359622676&permissions=8&scope=bot')
   .addField(`__${p}resimli-hg-bb ayarla #kanal__`,`Resimli HG BB yi Ayarlamak İçin`)
   .addField(`__${p}resimli-hg-bb kapat__`,`Bu Şekilde Kapatabilirsiniz`)
-  .setFooter('Resimli HG BB Sistem')
+  .setFooter('Resimli HG BB Sistem').setColor('#1dffea')
   .setImage('https://cdn.discordapp.com/attachments/781191198315905035/781212276363493386/Gorusuruz.png')
   message.channel.send(resim)
 }
