@@ -33,7 +33,8 @@ let kullaniciSchema = new Schema({
   otoroll : {
     bot : {type : String,default : null},
     user : {type : String,default :null}
-  }
+  },
+ resimli : {type : String,default:null}
   
 });
 
