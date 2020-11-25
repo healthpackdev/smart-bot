@@ -21,8 +21,8 @@ if(ne == "kayıt") {
   if(!vr.Kkanal) {
     eksiks.addField(`<:dndly:769202661391466527>__${p}k-kanal__`,`\`${p}e & ${p}k\` **Kayıt Kanalı**  Ayarlanmazsa Kayıt Asla **Çalışamaz**`)
   }
-  if(!vr.otorol) {
-    eksiks.addField(`<:afkly:769202661530140742>__${p}otorol evet__`,`Otorol Evet Yapılmazsa ise Gelen Kişilere **Kayıtsız** Rolü **Verilmez**`)
+  if(!vr.otoroll.user) {
+    eksiks.addField(`<:afkly:769202661530140742>__${p}otorol user @role__`,`Otorol Ayarlanmazsa  Gelen Kişilere Otorol **Verilmez**`)
   }
   if(!vr.Karol){
     eksiks.addField(`<:dndly:769202661391466527>__${p}ka-rol__`,`\`${p}e & ${p}k\` **Kayıtsız Rolü** Ayarlanmazsa Kayıt Asla **Çalışamaz**`)
