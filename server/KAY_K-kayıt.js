@@ -85,7 +85,7 @@ let kayıtSchema = new KayıtŞema({
   User : `**${member.user.tag}**(\`${member.id}\`)`,
   Owner : message.author.id,
   Gender : "<:kadin:769607582318067723>",
-  Name : `${member.nickname}`
+  Name :`${isim} | ${yaş}`
 })
 kayıtSchema.save().then(a=>{})  
    
