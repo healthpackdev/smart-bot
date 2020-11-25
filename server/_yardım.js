@@ -60,9 +60,9 @@ const pre = new Discord.MessageEmbed().setTitle('Smart Moderasyon Komutları').s
 **Bu Sistemlerin Düzgün Çalışması için Botun Rolünü yetkililerden Üste Çekmek Doğru Fikirdir**
 `)
 .addField(`<a:banned:780409577413410857>__${p}ban-sistem__》`,`Gelişmiş Ban Sistemi Ayarları`,true)
-.addField(`<a:altin1mor:769202953654632472>__${p}sayaç__》`,`Ayarlamalı Sayaç Sistemi`,true)
-.addField(`<a:load:769855808879984660>__${p}otorol__》`,`Botlara Ve Kullanıcılara Verilen Otorol`)
-
+.addField(`<a:altin1mor:769202953654632472>__${p}sayaç__》`,`Ayarlamalı Sayaç Sistemi`,true).addField('** **','** **')
+.addField(`<a:load:769855808879984660>__${p}otorol__》`,`Botlara Ve Kullanıcılara Verilen Otorol`,true)
+.addField(`<a:load:769855808879984660>__${p}resimli-hg-bb__》`,`Resimli Hg Bb Kanalını Ayarlarsınız`,true)
 .setFooter('Sunucu Moderasyon İşlemleri',message.author.avatarURL({dynamic: true}) ).setThumbnail(message.author.avatarURL({format : "png",dynamic : true})).setColor('#ff0000')
 return message.channel.send(pre)
 } else if(args[0] == "bot"){
