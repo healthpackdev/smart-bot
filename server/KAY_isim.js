@@ -21,7 +21,7 @@ message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olur:76920286
 }
 exports.help = {
     name : "isim",
-    aliases : ['isim-değiş'],
+    aliases : ['isim-değiş','nick'],
     open : true,
     perm : "no"
    
