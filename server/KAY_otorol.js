@@ -3,30 +3,25 @@ const open = require('../open.json')
 
 exports.run = async(client, message, args,p,data) => {
 
-  let kayıtsız = await data.findOne({sunucu : message.guild.id})
-  let kytz = kayıtsız.Karol
-  let yet = message.guild.roles.cache.get(kytz)
-  const embed2= new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | İlk Önce Kayıtsız Rolünü ayarla ').setColor(open.embedFalse)
-  const embed3= new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | Kayıt Sırasında Zaten Kimseye otorol vermiyorum').setColor(open.embedFalse)
-  const embed4= new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | Kayıt Sırasında Zaten Otorol veriyorum').setColor(open.embedFalse)
-
-let fetch1 = await data.findOne({sunucu : message.guild.id})
-let fetch = fetch1.otorol
 let ne = args[0]
-if(ne == "evet") {
-  if(!yet) return message.channel.send(embed2)
-  if(fetch) return message.channel.send(embed4)
-  await data.findOneAndUpdate({sunucu : message.guild.id},{$set : {otorol : true} })
-  message.channel.send(new Discord.MessageEmbed().setDescription('<a:olur:769202869151989761> | Biri Gelince artık ``@'+ yet.name+ '`` Rolü Oto verilecek!').setColor(open.embedTrue))
-} else if(ne == "hayır") {
-  if(!yet) return message.channel.send(embed2)
-   if(!fetch) return message.channel.send(embed3)
-  
-    await data.findOneAndUpdate({sunucu : message.guild.id},{$set : {otorol : false}})
-  message.channel.send(new Discord.MessageEmbed().setDescription('<a:olur:769202869151989761> | Kayıt Kayıtsız rolünü otomatik verme **kapandı**!').setColor(open.embedTrue))
+if(ne == "user"||ne == "kullanıcı") {
+  let role = message.mentions.roles.first()||message.guild.roles.cache.get(args[1])
+  if(!role)return client.sendFalse(`Otorol **Kullanıcı** Rolünü Ayarlamak İçin Bir rol **@etiketlemelisin**`,message.channel)
+  if(role.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`${role}, Bu Rol Benim En Üst Rolümden Üstte Bir rol`,message.channel)
+  await data.findOneAndUpdate({sunucu : message.guild.id},{$set : {"otoroll.user":role.id}})
+  client.sendTrue(`Otorol **Kullanıcı** Rolü ${role} Olarak başarıyla Ayarlandı`,message.channel)
+}else if(ne == "bot") {
+    let role = message.mentions.roles.first()||message.guild.roles.cache.get(args[1])
+  if(!role)return client.sendFalse(`Otorol **Bot** Rolünü Ayarlamak İçin Bir rol **@etiketlemelisin**`,message.channel)
+  if(role.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`${role}, Bu Rol Benim En Üst Rolümden Üstte Bir rol`,message.channel)
+  await data.findOneAndUpdate({sunucu : message.guild.id},{$set : {"otoroll.bot":role.id}})
+  client.sendTrue(`Otorol **Bot** Rolü ${role} Olarak başarıyla Ayarlandı`,message.channel)
 } else {
-  const embed = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Lütfen Bir Seçenek girin : ${p}otorol evet/hayır`).setColor(open.embedFalse)
-  message.channel.send(embed)
+  const otorol = new Discord.MessageEmbed().setTitle('Otorol Sistem').setURL('https://discord.com/api/oauth2/authorize?client_id=769110620359622676&permissions=8&scope=bot')
+  .addField(`<a:load:769855808879984660>__${p}otorol user @rol__`,`Otorol Gelen **Bot Olmayan** Kişilere Verilecek Rol`)
+  .addField(`<a:load:769855808879984660>__${p}otorol bot @rol__`,'Otorol Gelen **Bot Olan** Kişilere Verilecek Rol')
+  .setFooter('Otorol Sistemi',message.author.avatarURL({dynamic : true})).setColor('#0e0c0c')
+  message.channel.send(otorol)
 }
 
 
@@ -41,6 +36,6 @@ exports.help = {
    
 }
 exports.play = {
-    usage : "otorol <evet/hayır>",
+    usage : "otorol <user/bot> <role>",
     description : "Kayıt Sırasında Otomatik Kayıtsız rolü verilecek mi?"
 }
