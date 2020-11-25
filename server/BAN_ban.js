@@ -26,10 +26,12 @@ return client.sendFalse(`**Bugünkü Ban Limitini aştın! \`Ban\` Rolünü Alı
   let sebep = args.slice(1).join(" ")
   let member = message.mentions.members.first()||message.guild.members.cache.get(args[0])
   if(!member)return client.sendFalse(`Banlamak İçin Bir Kullanıcı Etiketlemelisin`,message.channel)
-  if(!sebep) return client.sendFalse(`Banlamak için Bir \`Sebep\` Yazmalısın`,message.channel)
-  if(member.banable) return client.sendFalse(`Bu Kullanıcıyı Banlayamıyorum`,message.channel)
-  if(member.id == message.author.id) return message.reply('kendinden Ne istiyorsun :(')
+
+   if(member.id == message.author.id) return message.reply('kendinden Ne istiyorsun :(')
   if(member.id == client.user.id) return message.reply(`O işler öyle Olmuyor Kardeş...`)
+  if(member.banable) return client.sendFalse(`Bu Kullanıcıyı Banlayamıyorum`,message.channel)
+  if(!sebep) return client.sendFalse(`Banlamak için Bir \`Sebep\` Yazmalısın`,message.channel)
+ 
   if(message.member.roles && member.roles && message.member.roles.highest.position <= member.roles.highest.position) return client.sendFalse(`Bu kullanıcı Aynı Pozisyona veya Senden Daha Üstte bir Role sahip`,message.channel)
 if(lm.bansistem.log) {
   const embed = new Discord.MessageEmbed()
