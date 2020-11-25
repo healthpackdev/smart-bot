@@ -21,6 +21,7 @@ if(!c.resimli) return client.sendFalse('Resimli Hg BB zaten ayarlanmamış')
   .addField(`__${p}resimli-hg-bb kapat__`,`Bu Şekilde Kapatabilirsiniz`)
   .setFooter('Resimli HG BB Sistem')
   .setImage('https://cdn.discordapp.com/attachments/781191198315905035/781212276363493386/Gorusuruz.png')
+  message.channel.send(resim)
 }
 }
 exports.help = {
