@@ -38,7 +38,6 @@ const kayıt = new Discord.MessageEmbed().setTitle('Smart Kayıt Sistemi').setUR
 .addField(`<a:mavi1:780047769146228757>__${p}isim-düzeni [Komutu uygula]__》`,`\`Kayıt Edilen Kişinin İsmini Düzenleme\``)
 .addField(`<a:mavi1:780047769146228757>__${p}aktiflik <aç/kapat>__》`,`\`Kayıtları Sayar ve ${p}profil Komutu İle görebilirsiniz\``)
 .addField(`<a:mavi1:780047769146228757>__${p}embed <evet/hayır>__》`,`\`Kayıt Mesajı Kutulu mu Kutusuz mu\``)
-.addField(`<a:mavi1:780047769146228757>__${p}otorol <evet/hayır>__》`,`\`Gelen Kişiye Kayıtsız Rolü Verilecek mi\``)
 .addField(`<a:mavi1:780047769146228757>__${p}k-mesaj__》`,`\`Ultra Mega Süper Kayıt mesajı özelleştirme\``)
 
 
@@ -62,6 +61,7 @@ const pre = new Discord.MessageEmbed().setTitle('Smart Moderasyon Komutları').s
 `)
 .addField(`<a:banned:780409577413410857>__${p}ban-sistem__》`,`Gelişmiş Ban Sistemi Ayarları`,true)
 .addField(`<a:altin1mor:769202953654632472>__${p}sayaç__》`,`Ayarlamalı Sayaç Sistemi`,true)
+.addField(`<a:load:769855808879984660>__${p}otorol__》`,`Botlara Ve Kullanıcılara Verilen Otorol`)
 
 .setFooter('Sunucu Moderasyon İşlemleri',message.author.avatarURL({dynamic: true}) ).setThumbnail(message.author.avatarURL({format : "png",dynamic : true})).setColor('#ff0000')
 return message.channel.send(pre)
