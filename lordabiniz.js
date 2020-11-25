@@ -287,6 +287,8 @@ if(!l)return;
   .toAttachment();
  var att = new Discord.MessageAttachment(resim.toBuffer(),"Gorusuruz.png")
  ch.send(att)
+    }
+  }
     let sayac = l.sayac
 if(sayac.kanal && sayac.hedef) {
   let channel = member.guild.channels.cache.get(sayac.kanal)
