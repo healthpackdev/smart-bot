@@ -189,7 +189,7 @@ if(created < milisaniye) e = `Tehlikeli`
   let sayac = l.sayac
 if(sayac.kanal && sayac.hedef) {
   let channel = member.guild.channels.cache.get(sayac.kanal)
-  if(!channel)return;
+  if(channel){
   let hgmsj;
    let kalan = sayac.hedef - member.guild.memberCount
   if(sayac.hg) hgmsj = sayac.hg
@@ -215,6 +215,12 @@ if(sayac.kanal && sayac.hedef) {
   }
   
 }
+}
+   if(member.user.bot && l.otoroll.bot) {
+    member.roles.add(l.otoroll.bot)
+  } else if(!member.user.bot && l.otoroll.user) {
+    member.roles.add(l.otoroll.user)
+  }
           })
 client.on('guildMemberRemove',async member => {
   
