@@ -18,7 +18,6 @@ let kullaniciSchema = new Schema({
  aktiflik : {type :  Boolean, default : false},
  embed : {type :  Boolean, default : false},
  Izorun : {type : Boolean, default : false},
- otorol : {type : Boolean, default : false},
  bansistem : {
   yetkili : {type : String,default : null},
   log : {type : String,default :null},
@@ -30,6 +29,10 @@ let kullaniciSchema = new Schema({
     embed :  {type : Boolean,default : false},
     kanal:  {type : String,default : null},
     hedef : {type : Number,default : null},
+  },
+  otoroll : {
+    bot : {type : String,default : null},
+    user : {type : String,default :null}
   }
   
 });
