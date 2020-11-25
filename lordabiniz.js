@@ -89,7 +89,7 @@ try {
 let yetkili = l.Yrol
 let kayıtsız = l.Karol
 let kayıtkanal = l.Kkanal
-let otorol = l.otorol
+
 let embed = l.embed
 let mesaj = l.mesaj.msj,renk = l.mesaj.renk
 if(yetkili && kayıtsız && kayıtkanal) {
@@ -131,9 +131,7 @@ if(created < milisaniye) e = `Tehlikeli`
      .map(c => mapping[c] || c)
      .join("")
   if(teyit2) {
-    if(otorol) {
-      member.roles.add(kayıtsız)
-    }
+   
     let msj;
     if(mesaj) msj = mesaj.
     replace('{user:etiket}',member).
