@@ -219,12 +219,74 @@ if(sayac.kanal && sayac.hedef) {
   } else if(!member.user.bot && l.otoroll.user) {
     member.roles.add(l.otoroll.user)
   }
+    if(l.resimli){
+    let ch = member.guild.channels.cache.get(l.resimli)
+    if(ch){
+       const canv = require('discord-canvas')
+ 
+   
+          const resim = await new canv.Goodbye()
+      .setUsername(member.user.username)
+  .setDiscriminator(member.user.discriminator)
+  .setMemberCount(member.guild.memberCount)
+  .setGuildName(member.guild.name)
+  .setAvatar(member.user.avatarURL({format : "jpg"}))
+  .setColor("border", "#0c0ff0")
+  .setColor("username-box", "#0c0ff0")
+  .setColor("discriminator-box", "#0c0ff0")
+  .setColor("discriminator", "#23e9b5")
+  .setColor('username','#23e9b5')
+  .setColor('hashtag','#09ff00')
+  .setColor('title-border','#0e0c0c')
+  .setColor("message-box", "#0c0ff0")
+  .setColor('message','#b6bb1a')
+  .setColor("title", "#0c0ff0")
+  .setColor('member-count','#0e0c0c')    
+  .setColor("avatar", "#0c0ff0")
+  .setBackground("https://cdn.discordapp.com/attachments/781089989781094410/781182296375033876/unnamed.jpg")
+  .setText("title","Hosgeldin")    
+  .setText("message","{server} Sunucuya KatIldI!")
+  .setText("member-count","{count} Üye Olduk!")
+  .toAttachment();
+ var att = new Discord.MessageAttachment(resim.toBuffer(),"Hosgeldin.png")
+ ch.send(att)
+   
+    }
+  }
           })
 client.on('guildMemberRemove',async member => {
   
 let l = await data.findOne({sunucu  : member.guild.id})
 if(!l)return;
-  
+  const canv = require('discord-canvas')
+  if(l.resimli){
+    let ch = member.guild.channels.cache.get(l.resimli)
+    if(ch){
+          const resim = await new canv.Goodbye()
+      .setUsername(member.user.username)
+  .setDiscriminator(member.user.discriminator)
+  .setMemberCount(member.guild.memberCount)
+  .setGuildName(member.guild.name)
+  .setAvatar(member.user.avatarURL({format : "jpg"}))
+  .setColor("border", "#ff0702")
+  .setColor("username-box", "#ff0702")
+  .setColor("discriminator-box", "#ff0702")
+  .setColor("discriminator", "#23e9b5")
+  .setColor('username','#23e9b5')
+  .setColor('hashtag','#09ff00')
+  .setColor('title-border','#0e0c0c')
+  .setColor("message-box", "#ff0702")
+  .setColor('message','#b6bb1a')
+  .setColor("title", "#ff0702")
+  .setColor('member-count','#0e0c0c')    
+  .setColor("avatar", "#ff0702")
+  .setBackground("https://cdn.discordapp.com/attachments/781089989781094410/781182296375033876/unnamed.jpg")
+  .setText("title","Görüsürüz")    
+  .setText("message","{server} Sunucusundan AyrIldI!")
+  .setText("member-count","{count} Üye KaldIk")
+  .toAttachment();
+ var att = new Discord.MessageAttachment(resim.toBuffer(),"Gorusuruz.png")
+ ch.send(att)
     let sayac = l.sayac
 if(sayac.kanal && sayac.hedef) {
   let channel = member.guild.channels.cache.get(sayac.kanal)
