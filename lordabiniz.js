@@ -248,7 +248,7 @@ if(sayac.kanal && sayac.hedef) {
   .setColor("avatar", "#0c0ff0")
   .setBackground("https://cdn.discordapp.com/attachments/781089989781094410/781182296375033876/unnamed.jpg")
   .setText("title","Hosgeldin")    
-  .setText("message","{server} Sunucuya KatIldI!")
+  .setText("message","{server} Sunucusuna KatIldI!")
   .setText("member-count","{count} Üye Olduk!")
   .toAttachment();
  var att = new Discord.MessageAttachment(resim.toBuffer(),"Hosgeldin.png")
