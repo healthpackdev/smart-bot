@@ -80,7 +80,7 @@ if(cmd.help.perm !== "no") {
         const replaced = pem.replace('MANAGE_MESSAGES','Mesajları yönet').replace('MANAGE_CHANNELS','Kanalları Yönet').replace('VIEW_AUDIT_LOG','Denetim Kaydını Görüntüle').replace('VIEW_GUILD_INSIGHTS','Sunucu Bilgilerini Görüntüle').replace('MANAGE_NICKNAMES','Kullanıcı Adlarını yönet').replace('MANAGE_ROLES','Emojileri Yönet').replace('MANAGE_WEBHOOKS','WebHookları Yönet',).replace('MANAGE_EMOJIS','Emojileri yönet').replace('MENTION_EVERYONE','@everyone pingle').replace('ADMINISTRATOR','Yönetici').replace('MANAGE_GUILD','Sunucuyu Yönet').replace('BAN_MEMBERS','Üyeleri Engelle').replace('KİCK_MEMBERS','Üyeleri at')
       const embed = new Discord.MessageEmbed()
                  .setAuthor('Yetersiz Yetki','https://cdn.discordapp.com/emojis/781470058371219467.png?v=1')
-                      .setDescription(`<a:olmaz:769202870612131840> | Bu Komutu Kullanabilmek İçin **\`${replaced}\`** Yetkisine İhtiyacın var.`)
+                      .setDescription(`Bu Komutu Kullanabilmek İçin **\`${replaced}\`** Yetkisine İhtiyacın var.`)
                       .setColor(open.embedFalse)
                       .setTimestamp()
                       .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
