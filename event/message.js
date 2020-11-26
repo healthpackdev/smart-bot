@@ -83,7 +83,7 @@ if(cmd.help.perm !== "no") {
                       .setDescription(`<a:olmaz:769202870612131840> | Bu Komutu Kullanabilmek İçin **\`${replaced}\`** Yetkisine İhtiyacın var.`)
                       .setColor(open.embedFalse)
                       .setTimestamp()
-                      .setFooter(message.author.username,message.author.avatarURL({dynamic : true})
+                      .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
                   message.channel.send(embed)
                   return
   }
