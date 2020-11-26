@@ -66,8 +66,11 @@ if(cmd.help.perm !== "no") {
       if(message.author.id !== message.guild.owner.id && !open.sahip.includes(message.author.id)) {
 
       const embed = new Discord.MessageEmbed()
+      .setAuthor('Yetersiz Yetki','https://cdn.discordapp.com/emojis/781470058371219467.png?v=1')
                       .setDescription(`<a:olmaz:769202870612131840> | Bu Komutu Sadece **<@${message.guild.owner.id}>** Kullanabilir.`)
-                      .setColor(open.embedFalse)
+                       .setColor('#14d2e0')
+                      .setTimestamp()
+                      .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
                   message.channel.send(embed)
                   return
     }
@@ -81,7 +84,7 @@ if(cmd.help.perm !== "no") {
       const embed = new Discord.MessageEmbed()
                  .setAuthor('Yetersiz Yetki','https://cdn.discordapp.com/emojis/781470058371219467.png?v=1')
                       .setDescription(`Bu Komutu Kullanabilmek İçin **\`${replaced}\`** Yetkisine İhtiyacın var.`)
-                      .setColor(open.embedFalse)
+                      .setColor('#14d2e0')
                       .setTimestamp()
                       .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
                   message.channel.send(embed)
