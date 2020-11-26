@@ -4,6 +4,7 @@ const kyt = require('../database/şema/kayıt.js')
 exports.run = async(client, message, args, p,db) => {
   let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
   let ytk = await db.findOne({sunucu : message.guild.id})
+  if(!ytk.aktiflik) return client.sendFalse(`İlk Önce Aktiflik Açılmalı: **${p}aktiflik aç**`,message.channel)
 if(!ytk.Yrol) return message.reply(`Bu Sunucuda Kayıt yetkili rolü ayarlanmamış`)
   if(!message.member.roles.cache.has(ytk.Yrol)) return message.channel.send(new Discord.MessageEmbed().setColor(open.embedFalse).setDescription(`<a:olmaz:769202870612131840> | Bu Komutu Kullanmak için <@&${ytk.Yrol}> Rolüne Sahip olmalısın.`))
   if(!member) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | isimlerini Göstermek için Bir Kullanıcı(\`Sunucuda Olan\`) Girmelisin.`).setColor(open.embedFalse))
