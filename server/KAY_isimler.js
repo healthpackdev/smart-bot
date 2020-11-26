@@ -8,7 +8,7 @@ if(!ytk.Yrol) return message.reply(`Bu Sunucuda Kayıt yetkili rolü ayarlanmam�
   if(!message.member.roles.cache.has(ytk.Yrol)) return message.channel.send(new Discord.MessageEmbed().setColor(open.embedFalse).setDescription(`<a:olmaz:769202870612131840> | Bu Komutu Kullanmak için <@&${ytk.Yrol}> Rolüne Sahip olmalısın.`))
   if(!member) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | isimlerini Göstermek için Bir Kullanıcı(\`Sunucuda Olan\`) Girmelisin.`).setColor(open.embedFalse))
   let bilgiler = await kyt.find({event : "Kayıt",Guild : message.guild.id, MM : member.id})
-
+if(bilgiler.length <= 0) return message.channel.send(new Discord.MessageEmbed().setAuthor(member.user.tag,member.user.avatarURL({dynamic : true})).setDescription(`**Bu Üyenin herhangi Bir Kaydı Bulunmuyor**`).setColor('#000302').setFooter('Kayıt Bulunmuyor'))
 const embed = new Discord.MessageEmbed().setTitle(`${member.nickname ? member.nickname : member.user.username} \`-\` Kayıt İsimleri`)
 .setDescription(`
 <:mahkemeci:773549662988795904> **${member}'ın Toplam \`${bilgiler.length}\` Tane İsimli Kayıtı bulundu!**
