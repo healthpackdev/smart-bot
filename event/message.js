@@ -2,7 +2,6 @@ const open = require('../open.json');
 const ş = require('../database/şema/Sunucu.js')
 const Discord = require('discord.js')
 const dbl = require('dblapi.js')
-const db = require('../loader/dataLoader.js').db
 module.exports = async message => {
 let client = message.client
 const DBL = new dbl(open.dbl,client)
@@ -93,7 +92,7 @@ if(cmd.help.perm !== "no") {
 }
 }
 
-    cmd.run(client, message, params, p,ş,db)
+    cmd.run(client, message, params, p,ş)
   
       } catch(e) {
     const hata = new Discord.MessageEmbed().setColor(open.embedFalse)
