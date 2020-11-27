@@ -12,7 +12,7 @@ let acikmi = f.aktiflik
   const embed7 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | İlk Önce Aktifliği açman gerek \`${p}aktiflik aç\` Yazarak açabilirsin.`).setColor(open.embedFalse)
 
   if(!acikmi) return message.channel.send(embed7)
-
+if(!yetkili) return message.reply('Kayıt Yetkili Rolü Ayarlanmamış.')
 let user = message.mentions.users.first() || message.guild.members.cache.get(args[0]) || message.author
 let member = message.guild.member(user)
 
