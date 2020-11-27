@@ -34,7 +34,8 @@ exports.help = {
     aliases : ['p'],//Komutun alternatif kullanımları
     open : true,//Komut Kullanıma açık mı kapalı mı
     perm : "MANAGE_GUILD",//Komutu kullanacak Perming adını yaz sunucu sahibi ise owner eğer yok ise "no"
-    limit : "10"//saniye olarak komutun cooldown'unu yaz yok ise 0 yaz
+    limit : "10",
+  vote : true
    
 }
 exports.play = {
