@@ -256,6 +256,8 @@ if(sayac.kanal && sayac.hedef) {
    
     }
   }
+   const {otoisim} = require('./helpers/guildAdd.js')
+otoisim(l,member)
           })
 client.on('guildMemberRemove',async member => {
   
