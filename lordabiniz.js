@@ -252,7 +252,7 @@ if(sayac.kanal && sayac.hedef) {
   .setText("member-count","{count} Üye Olduk!")
   .toAttachment();
  var att = new Discord.MessageAttachment(resim.toBuffer(),"Hosgeldin.png")
- ch.send(att)
+ ch.send(`${member}, Sunucuya Hoşgeldin \`${member.guild.memberCount}\`. Kişisin!`+att)
    
     }
   }
@@ -289,7 +289,7 @@ if(!l)return;
   .setText("member-count","{count} Üye KaldIk")
   .toAttachment();
  var att = new Discord.MessageAttachment(resim.toBuffer(),"Gorusuruz.png")
- ch.send(att)
+ ch.send(`${member.user.tag}, Sunucudan Ayrıldı \`${member.guild.memberCount}\` Kişi Kaldık!`+att)
     }
   }
     let sayac = l.sayac
