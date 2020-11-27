@@ -62,7 +62,8 @@ const pre = new Discord.MessageEmbed().setTitle('Smart Moderasyon Komutları').s
 .addField(`<a:banned:780409577413410857>__${p}ban-sistem__》`,`Gelişmiş Ban Sistemi Ayarları`,true)
 .addField(`<a:altin1mor:769202953654632472>__${p}sayaç__》`,`Ayarlamalı Sayaç Sistemi`,true).addField('** **','** **')
 .addField(`<a:load:769855808879984660>__${p}otorol__》`,`Botlara Ve Kullanıcılara Verilen Otorol`,true)
-.addField(`<:tester:773549663458295818>__${p}resimli-hg-bb__》`,`Resimli Hg Bb Kanalını Ayarlarsınız`,true)
+.addField(`<:tester:773549663458295818>__${p}resimli-hg-bb__》`,`Resimli Hg Bb Kanalını Ayarlarsınız`,true).addField('** **','** **')
+.addField(`<:elmas:779701065997090816>__${p}otoisim__》`,`Otomatik isim Sistemi`,true)
 .setFooter('Sunucu Moderasyon İşlemleri',message.author.avatarURL({dynamic: true}) ).setThumbnail(message.author.avatarURL({format : "png",dynamic : true})).setColor('#ff0000')
 return message.channel.send(pre)
 } else if(args[0] == "bot"){
