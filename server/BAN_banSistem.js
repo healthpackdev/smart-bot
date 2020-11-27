@@ -55,7 +55,8 @@ exports.help = {
     name : "ban-sistem",
     aliases : ['bansistemi','ban-sistemi'],
     open : [true],
-    perm : "ADMINISTRATOR"
+    perm : "ADMINISTRATOR",
+    vote : true
    
 }
 exports.play = {
