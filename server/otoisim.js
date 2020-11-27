@@ -6,7 +6,7 @@ exports.run = async(client, message, args, p,db) => {
 let ne = args[0]
 if(ne == "ayarla") {
 if(!args.slice(1).join(" ")) return client.sendFalse(`Yapılacak İsmi Girmelisin`,message.channel)
-
+if(args.slice(1).join(" ").length > 15) return client.sendFalse(`Max. **19** Karakter Girebilirsin`,message.channel)
 await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {otoisim : args.slice(1).join(" ")}})
 client.sendTrue(`Oto İsim başarıyla **${args.slice(1).join(" ")}** Olarak Ayarlandı`,message.channel)
 } else if(ne =="kapat"){
