@@ -16,7 +16,7 @@ if(ne == "kapat") {
   message.channel.send(new Discord.MessageEmbed().setColor(open.embedTrue).setDescription(`<a:olur:769202869151989761> | Kayıt Mesajı Başarıyla Normale döndü.`))
 }else if(ne == "ayarla") {
   if(!ne2) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Ayarlamam için Değişkenler ile bir mesaj girmelisin: **${p}k-mesaj ayarla <mesaj>**`).setColor(open.embedFalse))
-  if(ne2.length > 500 || ne2.length < 10) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Min. **10 Karakter** Max. **500 Karakter** Girmelisin.`).setColor(open.embedFalse))
+  if(ne2.length > 1000 || ne2.length < 10) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Min. **10 Karakter** Max. **500 Karakter** Girmelisin.`).setColor(open.embedFalse))
   
   message.channel.send(new Discord.MessageEmbed().setColor('#4c0ff3').setDescription(`Onay veriyor musun? **evet** veya **hayır**`).addField('Mesaj',ne2))
   let collecter = await message.channel.awaitMessages(m=>m.author.id == message.author.id,{max : 1,time : 30000,errors : ['time']})
