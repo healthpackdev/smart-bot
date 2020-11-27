@@ -18,7 +18,7 @@ if(ne == "kayıt") {
   if(!vr.Yrol||!message.guild.roles.cache.get(vr.Yrol)) {
     eksiks.addField(`<:dndly:769202661391466527>__${p}y-rol__`,`\`${p}e & ${p}k\` **Yetkili** Rolü Ayarlanmazsa Kayıt Asla **Çalışamaz**`)
   }
-  if(!vr.Kkanal||!message.guild.channels.cache.get(vr.Krol)) {
+  if(!vr.Kkanal||!message.guild.channels.cache.get(vr.Kkanal)) {
     eksiks.addField(`<:dndly:769202661391466527>__${p}k-kanal__`,`\`${p}e & ${p}k\` **Kayıt Kanalı**  Ayarlanmazsa Kayıt Asla **Çalışamaz**`)
   }
   if(!vr.otoroll.user) {
