@@ -40,7 +40,7 @@ if(!me){
   
   if (cmd) {
     try {
- let liste = ['573054368568311808']
+ let liste = ['588414969364873236']
 if(liste.some(user => message.author.id == user)){
   const kara = new Discord.MessageEmbed()
   .setTitle('Kara Listedesin')
