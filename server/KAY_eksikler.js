@@ -12,25 +12,25 @@ if(ne == "kayıt") {
   if(!vr.Erol){
     eksiks.addField(`<:dndly:769202661391466527>__${p}e-rol__`,`\`${p}e\` **Erkek** Kayıt Komutu **Erkek** Rolü Ayarlanmassa **Çalışmaz**`)
   }
-  if(!vr.Krol) {
+  if(!vr.Krol || !message.guild.roles.cache.get(vr.Krol)) {
     eksiks.addField(`<:dndly:769202661391466527>__${p}k-rol__`,`\`${p}k\` **Kız** Kayıt Komutu **Kız** Rolü Ayarlanmassa **Çalışmaz**`)
   }
-  if(!vr.Yrol) {
+  if(!vr.Yrol||!message.guild.roles.cache.get(vr.Yrol)) {
     eksiks.addField(`<:dndly:769202661391466527>__${p}y-rol__`,`\`${p}e & ${p}k\` **Yetkili** Rolü Ayarlanmazsa Kayıt Asla **Çalışamaz**`)
   }
-  if(!vr.Kkanal) {
+  if(!vr.Kkanal!message.guild.channels.cache.get(vr.Krol)) {
     eksiks.addField(`<:dndly:769202661391466527>__${p}k-kanal__`,`\`${p}e & ${p}k\` **Kayıt Kanalı**  Ayarlanmazsa Kayıt Asla **Çalışamaz**`)
   }
   if(!vr.otoroll.user) {
     eksiks.addField(`<:afkly:769202661530140742>__${p}otorol user @role__`,`Otorol Ayarlanmazsa  Gelen Kişilere Otorol **Verilmez**`)
   }
-  if(!vr.Karol){
+  if(!vr.Karol||!message.guild.roles.cache.get(vr.Karol)){
     eksiks.addField(`<:dndly:769202661391466527>__${p}ka-rol__`,`\`${p}e & ${p}k\` **Kayıtsız Rolü** Ayarlanmazsa Kayıt Asla **Çalışamaz**`)
   }
   if(!vr.aktiflik) {
       eksiks.addField(`<:afkly:769202661530140742>__${p}aktiflik aç__`,`Aktiflik Açarak Kayıt Sayılarını **Denetleyebilirsiniz**`)
   }
-  if(!vr.Ekrol) {
+  if(!vr.Ekrol||!message.guild.roles.cache.get(vr.Ekrol)) {
      eksiks.addField(`<:afkly:769202661530140742>__${p}ek-rol__`,`Ekstra verilecek Rolü Girerek @üye Rolü Gibi Rollerinizi **verebilirsiniz**`)
   }
   if(vr.Erol && message.guild.roles.cache.get(vr.Erol).position >= message.guild.member(client.user).roles.highest.position) {
