@@ -59,6 +59,7 @@ if(ne == "ayarla") {
   .addField(`<a:altin1mor:769202953654632472>__${p}sayaç embed__》`,`Sayaç Mesajı Yanı Renkli Olan Kutulu mu Mesaj mı olsun(\`Normali : "Hayır"\`)`)
   .addField(`<a:altin1mor:769202953654632472>__${p}sayaç hg <Mesaj>__》`,`Sayaç **HG** Mesajını Özelleştirebilirsiniz **Değişkenler Altta**`) 
   .addField(`<a:altin1mor:769202953654632472>__${p}sayaç bb <Mesaj>__》`,`Sayaç **BB** Mesajını Özelleştirebilirsiniz **Değişkenler Altta**`)
+  .addField(`<a:altin1mor:769202953654632472>__${p}sayaç kapat__》`,`Sistemi Kapatır Yeniden Ayarlayabilirsiniz`)
   .addField(`<a:altin1mor:769202953654632472>__Sayaç Mesajı Değişkenler__`,`
 > \`{user:etiket}\` Gelen Kullanıcıyı ${message.author} Şeklinde Etiketler **(Sadece HG Mesajında Geçerli)**
 
