@@ -47,7 +47,7 @@ if(liste.some(user => message.author.id == user)){
   .setDescription(`Kara Listedesin Hiç bir Komutu Kullanmana İzin vermem`)
   .setColor('BLUE')
   .addField(`Açtırmak İçin`,`Destek Sunucumuza gelip Dilenebilirsiniz XD [Tıkla](https://discord.gg/bMC8tGr)`)
-  .setFooter(message.author.username,message.author.avatarURL({dynamic : true})
+  .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
 return message.channel.send(kara)
 }
 if(cmd.help.vote == true){
