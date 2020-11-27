@@ -40,7 +40,16 @@ if(!me){
   
   if (cmd) {
     try {
- 
+ let liste = ['573054368568311808']
+if(liste.some(user => message.author.id == user)){
+  const kara = new Discord.MessageEmbed()
+  .setTitle('Kara Listedesin')
+  .setDescription(`Kara Listedesin Hiç bir Komutu Kullanmana İzin vermem`)
+  .setColor('BLUE')
+  .addField(`Açtırmak İçin`,`Destek Sunucumuza gelip Dilenebilirsiniz XD [Tıkla](https://discord.gg/bMC8tGr)`)
+  .setFooter(message.author.username,message.author.avatarURL({dynamic : true})
+return message.channel.send(kara)
+}
 if(cmd.help.vote == true){
 
   let vote= await DBL.hasVoted(message.author.id)
