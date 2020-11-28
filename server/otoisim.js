@@ -35,7 +35,7 @@ exports.help = {
     name : "otoisim",
     aliases : ['oto-isim'],
     open : [true],
-    perm : "no"
+    perm : "MANAGE_GUILD"
    
 }
 exports.play = {
