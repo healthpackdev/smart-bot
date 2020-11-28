@@ -24,7 +24,7 @@ if(ne == "kapat") {
   if(cv == "evet") {
 
     await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {"mesaj.msj":ne2}})
-    return message.channel.send(new Discord.MessageEmbed().setDescription(`**Kayıt Mesajı Başarıyla Ayarlandı. ${p}k-mesaj test**`).addField('Mesaj',ne2).setColor(open.embedTrue))
+    return message.channel.send(new Discord.MessageEmbed().setDescription(`**Kayıt Mesajı Başarıyla Ayarlandı.**`).addField('Mesaj',ne2).setColor(open.embedTrue))
   } else if(cv == "hayır") {
     message.reply('İşlem iptal edildi')
   } else {
