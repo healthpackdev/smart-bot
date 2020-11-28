@@ -10,7 +10,7 @@ var limit = lm.bansistem.limit
 if(!lm.bansistem.yetkili) return client.sendFalse('Ban yetkili Rolü Ayarlanmamış.',message.channel)
 if(!message.member.roles.cache.has(lm.bansistem.yetkili)) return client.sendFalse('Komutu Kullanabilmek için Ayarlanan Role Sahip Olmalısın',message.channel)
 if(limit) {
-  if(message.author.id != message.guild.owner.id) {
+  if(message.author.id != message.guild.owner.id && !message.member.hasPermission('ADMINISTRATOR')) {
 const daily = await db2.get(`${message.guild.id}.${message.author.id}_date`)
 if ( daily !== null && timeout - (Date.now() - daily) > 0) { 
   
