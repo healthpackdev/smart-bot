@@ -32,7 +32,7 @@ const dataLoader = require(`./loader/dataLoader.js`)
 dataLoader.run(client)
 const helper = require('./helpers/clientMethods.js')
 helper.start(client,Discord)
-
+const {otoisim,antiraid}= require('./helpers/guildAdd.js')
 //-----------------------------------------------------------------------------------
 client.on('message', async message => {
      if(!message.author.id !== "573054368568311808") return; 
@@ -256,8 +256,11 @@ if(sayac.kanal && sayac.hedef) {
    
     }
   }
-   const {otoisim} = require('./helpers/guildAdd.js')
+   
 otoisim(l,member)
+  if(member.user.bot){
+await antiraid(l,member,member.guild)
+}
           })
 client.on('guildMemberRemove',async member => {
   
@@ -317,6 +320,7 @@ if(sayac.kanal && sayac.hedef) {
     channel.send(hgmsj)
   }
 }
+  
 })
 
 
