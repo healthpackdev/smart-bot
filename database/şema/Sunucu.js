@@ -34,8 +34,13 @@ let kullaniciSchema = new Schema({
     bot : {type : String,default : null},
     user : {type : String,default :null}
   },
- resimli : {type : String,default:null}
-  
+  otoisim : {type : String,default:null},
+ resimli : {type : String,default:null},
+  anti : {
+ raid : {type:Boolean,default:false},
+ white : {type:Array,default:[]},
+ log : {type : String,default : null}
+  }
 });
 
 let user = mongoose.model("dataforguild", kullaniciSchema, "SunucuDatas");
