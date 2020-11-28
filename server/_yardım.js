@@ -46,7 +46,7 @@ const kayıt = new Discord.MessageEmbed().setTitle('Smart Kayıt Sistemi').setUR
 .setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/b819e63f-ac6a-40a2-8616-c62ef5027fbe%2Fregister-and-manage-customer-devices-with-connected-field-service-social.png?v=1603620021292');
 return message.channel.send(kayıt)
 } else if(k == "kullanıcı") {
-const kullanıcı = new Discord.MessageEmbed().setTitle('Smart Kayıt Sistemi').setURL('https://discord.com/api/oauth2/authorize?client_id=769110620359622676&permissions=8&scope=bot').setColor('#4800ff').setDescription(`
+const kullanıcı = new Discord.MessageEmbed().setTitle('Smart Kullanıcı Komutları').setURL('https://discord.com/api/oauth2/authorize?client_id=769110620359622676&permissions=8&scope=bot').setColor('#4800ff').setDescription(`
 \`${p}komut <komut-adı>\` : **Komut Hakkında Yardım almak için Yazmanız Yeterlidir.**
 
 `)
