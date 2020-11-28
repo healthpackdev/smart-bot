@@ -37,10 +37,10 @@ if(ne == "yetkili"||ne == "rol") {
  return client.sendTrue(`Ban Sistemi Ayarları Başarıyla Sıfırlandı.`,message.channel)
 } else {
   const bansiste = new Discord.MessageEmbed().setTitle('Smart Ban Sistemi').setURL('https://discord.com/api/oauth2/authorize?client_id=769110620359622676&permissions=8&scope=bot').setFooter('Ban Sistemi')
-  .addField(`<a:banned:780409577413410857>__${p}bansistem yetkili @rol__》`,`Ban yetkili Rolünü Ayarlamalısınız İstemediğiniz Kişiler Ban atamaz`)
-  .addField(`<a:banned:780409577413410857>__${p}bansistem log #kanal__》`,`Ban Atan Kişileri Neden Atmış Ne zaman Atmış Görebilirsiniz`)
-  .addField(`<a:banned:780409577413410857>__${p}bansistem limit <sayı>__》`,`Ban Yetkilileri Günde belirlediğiniz Sayı Dışında Atmaya Çalışırsa Rolünü Alır `)
-  .addField(`<a:banned:780409577413410857>__${p}bansistem kapat__》`,`Sistemi Kapatabilirsiniz`)
+  .addField(`<a:banned:780409577413410857>__${p}ban-sistem yetkili @rol__》`,`Ban yetkili Rolünü Ayarlamalısınız İstemediğiniz Kişiler Ban atamaz`)
+  .addField(`<a:banned:780409577413410857>__${p}ban-sistem log #kanal__》`,`Ban Atan Kişileri Neden Atmış Ne zaman Atmış Görebilirsiniz`)
+  .addField(`<a:banned:780409577413410857>__${p}ban-sistem limit <sayı>__》`,`Ban Yetkilileri Günde belirlediğiniz Sayı Dışında Atmaya Çalışırsa Rolünü Alır `)
+  .addField(`<a:banned:780409577413410857>__${p}ban-sistem kapat__》`,`Sistemi Kapatabilirsiniz`)
   .addField(`<a:banned:780409577413410857>__Kullanımlar__》`,`
 <:trash:776811458977464340>\`${p}ban @kullanıcı <sebep>\`: Yetkilileriniz Bu Şekilde **Ban** Atabilir 
 <:trash:776811458977464340>\`${p}unban <id> <sebep>\`: Yetkilileriniz Bu Şekilde Ban Açabilir 
@@ -53,7 +53,7 @@ if(ne == "yetkili"||ne == "rol") {
 }
 exports.help = {
     name : "ban-sistem",
-    aliases : ['bansistemi','ban-sistemi'],
+    aliases : ['bansistemi','ban-sistemi','bansistem'],
     open : [true],
     perm : "ADMINISTRATOR",
     vote : true
