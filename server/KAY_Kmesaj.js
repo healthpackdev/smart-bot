@@ -32,7 +32,7 @@ if(ne == "kapat") {
   }
 } else if(ne == "renk") {
     let c = await db.findOne({sunucu : message.guild.id})
-    if(c.embed == false) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Kayıt Mesajını Embed Yapınız :**${p}embed evet**`).setColor(open.embedFalse))
+    if(c.mesaj.embed == false) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Kayıt Mesajını Embed Yapınız :**${p}embed evet**`).setColor(open.embedFalse))
   if(!args[1]) return message.channel.send(new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | Bir Renk Kodu Gir örnek **#3b2b2bs**').setColor(open.embedFalse))
   if(!hex().test(args[1])) return message.channel.send(new Discord.MessageEmbed().setColor(open.embedFalse).setDescription('<a:olmaz:769202870612131840> | Lütfen Geçerli bir Renk Kodu Giriniz.'))
   await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {"mesaj.renk":args[1]}})
