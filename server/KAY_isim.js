@@ -16,7 +16,12 @@ if(!ism) return message.channel.send(new Discord.MessageEmbed().setDescription('
 if(!member.roles.cache.has(erkek) && !member.roles.cache.has(kız)) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Kullanıcının <@&${erkek}> Veya <@&${kız}> Rolüne Sahip olması gerekiyor.`).setColor(open.embedFalse))
   
 member.setNickname(ism)
-message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olur:769202869151989761> | ${member}, Yeni isimi \`${ism}\` olarak Ayarlandı.`).setColor(open.embedTrue))
+message.channel.send(new Discord.MessageEmbed()
+           .setAuthor('İsim Değiştirildi',message.author.avatarURL({dynamic : true}))
+                  .setDescription(`🔸️\`İsmi Değiştirilen\`: ${member}\n🔸️\`Yeni İsmi\`: **${ism}**`)
+                     .setColor('YELLOW')
+                     .setThumbnail(member.user.avatarURL({dynamic : true}))
+                     .setFooter(`${message.author.username}, ${member.user.username} Kişinin Adını Değiştirdi.`))
   
 }
 exports.help = {
