@@ -8,6 +8,7 @@ let kullaniciSchema = new Schema({
  mesaj : {
    renk : {type : String,default : "BLUE"},
    msj : {type : String,default : null},
+  embed : {type : Boolean,default : false}
  },
  Karol : {type : String, default : null},
  Ekrol : {type : String, default : null},
