@@ -61,6 +61,7 @@ const embed7 = new Discord.MessageEmbed().setDescription(`<a:olmaz:7692028706121
 if(!isim && !yaş && zorunlu) return message.channel.send(embed7)
    if(isim && isim.length > 20) return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
   if(yaş && yaş.length > 4)return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
+  
 if(member) {
 if(isim) {
  
@@ -75,9 +76,6 @@ member.setNickname(`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()
   }
 }
 
-if(teyit5) {
-  member.roles.add(ekstra)
-}
  if(aktiflik) {
 let kayıtSchema = new KayıtŞema({
   Guild : message.guild.id,
@@ -89,8 +87,12 @@ let kayıtSchema = new KayıtŞema({
 })
 await kayıtSchema.save()
  }
-  member.roles.add(erkek)
-  member.roles.remove(kayıtsız)
+  
+  var roles = []
+  if(teyit1) roles.push(teyit1.id)
+  if(teyit5) roles.push(teyit5.id)
+  
+  member.roles.set(roles)
   message.channel.send(embed5)
 }
 
