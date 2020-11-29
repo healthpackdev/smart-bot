@@ -93,7 +93,7 @@ let yetkili = l.Yrol
 let kayıtsız = l.Karol
 let kayıtkanal = l.Kkanal
 
-let embed = l.embed
+let embed = l.mesaj.embed
 let mesaj = l.mesaj.msj,renk = l.mesaj.renk
 if(yetkili && kayıtsız && kayıtkanal) {
 let teyit1 = member.guild.roles.cache.get(yetkili)
