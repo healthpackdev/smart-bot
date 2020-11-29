@@ -13,7 +13,6 @@ let ism = args.slice(1).join(" ")
 if(!message.member.roles.cache.has(yetkili) && !message.member.hasPermission('MANAGE_NICKNAMES')) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Kayıt Sorumlusu olan **<@&${yetkili}>** Rolüne Sahip Olmalısın!`).setColor(open.embedFalse))
 if(!member) return message.channel.send(new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | Lütfen Bir **Kullanıcı @etiketleyin veya ID ** Yazınız..').setColor(open.embedFalse))
 if(!ism) return message.channel.send(new Discord.MessageEmbed().setDescription('<a:olmaz:769202870612131840> | Lütfen Yeni **İsimi** Giriniz.').setColor(open.embedFalse))
-if(!member.roles.cache.has(erkek) && !member.roles.cache.has(kız)) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Kullanıcının <@&${erkek}> Veya <@&${kız}> Rolüne Sahip olması gerekiyor.`).setColor(open.embedFalse))
   
 member.setNickname(ism)
 message.channel.send(new Discord.MessageEmbed()
