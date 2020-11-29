@@ -36,8 +36,8 @@ const kayıt = new Discord.MessageEmbed().setTitle('Smart Kayıt Sistemi').setUR
 .addField(`<a:mavi1:780047769146228757>__${p}ek-rol @üye__》`,`\`Kayıt Ekstra Verilecek Rol Ayarlama\``)
 .addField(`<a:mavi1:780047769146228757>__${p}k-kanal #kayıt__》`,`\`Kayıtların yapılacağı ve Kayıt mesajlarının atılacağı kanal\``)
 .addField(`<a:mavi1:780047769146228757>__${p}isim-düzeni [Komutu uygula]__》`,`\`Kayıt Edilen Kişinin İsmini Düzenleme\``)
+.addField(`<a:mavi1:780047769146228757>__${p}isim-zorun <evet/hayır>__》`,`\`Kayıt Edilirken mecburen İsim yaş ile Etme\``)
 .addField(`<a:mavi1:780047769146228757>__${p}aktiflik <aç/kapat>__》`,`\`Kayıtları Sayar ve ${p}profil Komutu İle görebilirsiniz\``)
-.addField(`<a:mavi1:780047769146228757>__${p}embed <evet/hayır>__》`,`\`Kayıt Mesajı Kutulu mu Kutusuz mu\``)
 .addField(`<a:mavi1:780047769146228757>__${p}k-mesaj__》`,`\`Ultra Mega Süper Kayıt mesajı özelleştirme\``)
 
 
