@@ -38,6 +38,18 @@ if(ne == "kapat") {
   await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {"mesaj.renk":args[1]}})
   message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olur:769202869151989761> | **Başarıyla ${args[1]} Olarak Embedin Rengi Ayarlandı.**`).setColor(args[1]))
 
+} else if(ne == "embed"){
+let c = await db.findOne({sunucu : message.guild.id})
+if(c.mesaj.embed == true){
+ 
+ await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {"mesaj.embed":false}})
+ client.sendTrue(`Kayıt Mesajı Artık \`<kutulu/embed>\` Olarak **Atılmayacak`,message.channel)
+} else if(c.mesaj.embed == true){
+ 
+ await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {"mesaj.embed":true}})
+ client.sendTrue(`Kayıt Mesajı Artık \`<kutulu/embed>\` Olarak **Atılacak.**`,message.channel)
+}
+
 }else {
   let c = message.guild.memberCount.toLocaleString()
 
@@ -83,7 +95,7 @@ __Kayıt Kanalına Atılacak Mesajın İçeriği__
 > \`{random}\` 6 Hoşgeldin Cümlesinden birini atar
 
 **NOT**: **\`Emoji Kullanacaksanız bu sunucuda olmalı\`**
-`).addField('Mesajı Ayarlamak İçin',`\`${p}k-mesaj ayarla <mesaj>\``,true).addField('Eskisine Dönmek için',`\`${p}k-mesaj kapat\``,true).addField('** **','** **').addField('Embed Rengi Ayarlama',`\`${p}k-mesaj renk #renk-kod\``,true))
+`).addField('Mesajı Ayarlamak İçin',`\`${p}k-mesaj ayarla <mesaj>\``,true).addField('Eskisine Dönmek için',`\`${p}k-mesaj kapat\``,true).addField('** **','** **').addField('Kayıt Mesajını Embed Yapma',`\`${p}k-mesaj embed\``,true).addField('Embed Rengi Ayarlama',`\`${p}k-mesaj renk #renk-kod\``,true))
 }
 }
 exports.help = {
