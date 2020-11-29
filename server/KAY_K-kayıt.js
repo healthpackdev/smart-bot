@@ -57,8 +57,8 @@ const embed5 = new Discord.MessageEmbed().setAuthor('[ Kayıt Başarılı ]',res
 `).setThumbnail(member.user.avatarURL({format : "png", dynamic : true})).setColor('#af00f5')
 const embed7 = new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | **İsim Zorunluluğu Ayarlanmış İsim Yaş girmelisin**.\n\n \`!k @etiket İsim Yaş\` `).setColor(open.embedFalse)
 if(!isim && !yaş && zorunlu) return message.channel.send(embed7)
-  if(isim && isim.length > 20) return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
-  if(yaş && yaş.length > 4)return client.sendFalse(`Çok Büyük İsim Veya Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
+  if(isim && isim.length > 20) return client.sendFalse(`Çok Büyük İsim  Giriyorsun Kısaltmayı Dene.`,message.channel)
+  if(yaş && yaş.length > 4)return client.sendFalse(`Çok Büyük  Yaş Giriyorsun Kısaltmayı Dene.`,message.channel)
 if(member) {
   
 if(isim) {
@@ -91,10 +91,14 @@ kayıtSchema.save().then(a=>{})
    
 }
 
+    var roles = []
+  if(teyit1) roles.push(teyit1.id)
+  if(teyit5) roles.push(teyit5.id)
   
-  member.roles.add(kız)
-  member.roles.remove(kayıtsız)
+  member.roles.set(roles)
   message.channel.send(embed5)
+
+
 }
   
 }
