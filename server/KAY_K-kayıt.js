@@ -72,10 +72,7 @@ if(isim) {
 member.setNickname(`${isim.charAt(0).toUpperCase() + isim.slice(1).toLowerCase()} ${yaş}`)
   }
 }
-  
-if(teyit5) {
-  member.roles.add(ekstra)
-}
+
   
  if(aktiflik) {
    
