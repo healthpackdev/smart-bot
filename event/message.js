@@ -94,7 +94,7 @@ if(cmd.help.perm !== "no") {
                       .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
                   message.channel.send(embed)
                   return
-         
+         }
   }
 }
 }
