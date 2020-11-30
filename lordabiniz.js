@@ -202,7 +202,12 @@ if(sayac.kanal && sayac.hedef) {
     .replace('{user:ad}',member.user.username)
     .replace('{user:tag}',member.user.tag)
   
-  else hgmsj = `<:oki:769202569451929600>${member}, Sunucuya \`Geldi\` **${member.guild.memberCount}** Kişi Olduk **${sayac.hedef}** Kişi olmamıza **${kalan}** Kişi Kaldı!`
+  else hgmsj = `
+╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+║<a:gel:769163393717501962> ${member}, Sunucudan Katıldı
+║<a:gel:769163393717501962> **{sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
+║<a:gel:769163393717501962> Toplam **${member.guild.memberCount}** Kişi Kaldık
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬`
   if(member.guild.memberCount >= sayac.hedef) {
      channel.send(`<a:parti2:769163391943180319>${member}, Hedefe Ulaştık! **${sayac.hedef}** Kişi olduk, \`Sayaç Verileri Sıfırlandı\` Yeniden Ayarlayınız.`)
     await data.findOneAndUpdate({sunucu : member.guild.id},{$set : {"sayac.embed":false,"sayac.hedef":null,"sayac.kanal":null,"sayac.hg":null,"sayac.bb":null}})
@@ -311,7 +316,13 @@ if(sayac.kanal && sayac.hedef) {
     .replace('{user:ad}',member.user.username)
     .replace('{user:tag}',member.user.tag)
 
-  else hgmsj = `<:noki:769202569410117653>${member}, Sunucudan \`Ayrıldı\` **${member.guild.memberCount}** Kişi Kaldık **${sayac.hedef}** Kişi olmamıza **${kalan}** Kişi Kaldı!`
+  else hgmsj = `
+╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+║<a:git:769163394799501362> ${member}, Sunucudan Ayrıldı
+║<a:git:769163394799501362> **{sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
+║<a:git:769163394799501362> Toplam **${member.guild.memberCount}** Kişiyiz
+╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+`
 
   
   if(sayac.embed == true) {
