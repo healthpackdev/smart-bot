@@ -206,7 +206,7 @@ if(sayac.kanal && sayac.hedef) {
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ║<a:gel:769163393717501962> ${member}, Sunucuya Katıldı
 ║<a:gel:769163393717501962> **${sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
-║<a:gel:769163393717501962> Toplam **${member.guild.memberCount}** Kişi Kaldık
+║<a:gel:769163393717501962> Toplam **${member.guild.memberCount}** Kişi Olduk
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬`
   if(member.guild.memberCount >= sayac.hedef) {
      channel.send(`<a:parti2:769163391943180319>${member}, Hedefe Ulaştık! **${sayac.hedef}** Kişi olduk, \`Sayaç Verileri Sıfırlandı\` Yeniden Ayarlayınız.`)
@@ -320,7 +320,7 @@ if(sayac.kanal && sayac.hedef) {
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ║<a:git:769163394799501362> ${member}, Sunucudan Ayrıldı
 ║<a:git:769163394799501362> **${sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
-║<a:git:769163394799501362> Toplam **${member.guild.memberCount}** Kişiyiz
+║<a:git:769163394799501362> Toplam **${member.guild.memberCount}** Kişi Kaldık
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 `
 
