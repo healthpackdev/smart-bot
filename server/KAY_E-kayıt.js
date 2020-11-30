@@ -25,7 +25,7 @@ if(!teyit1) return message.channel.send('Ayarlanan Erkek rolü Sunucuda yok').th
 if(!teyit2) return message.channel.send('Ayarlanan Yetkili rolü Sunucuda yok').then(a => a.delete({timeout : "5000"}))
 if(!teyit3) return message.channel.send('Ayarlanan Kayıt kanalı  Sunucuda yok').then(a => a.delete({timeout : "5000"}))
 if(!teyit4) return message.channel.send('Ayarlanan kayıtsız rolü Sunucuda yok').then(a => a.delete({timeout : "5000"}))
-if(!teyit5&ekstra) return message.channel.send('Ayarlanan Esktra rol Sunucuda yok').then(a => a.delete({timeout : "5000"}))
+if(!teyit5) return message.channel.send('Ayarlanan Esktra rol Sunucuda yok').then(a => a.delete({timeout : "5000"}))
   
 if(teyit1 && teyit1.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit1} Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
   if(teyit4 && teyit4.position >= message.guild.member(client.user).roles.highest.position) return client.sendFalse(`**${teyit4} Rolü Benim En Üst Rolümden Üstte Lütfen Rolümü Bu Rolün Üstüne Çekiniz**`,message.channel)
