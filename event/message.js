@@ -81,6 +81,7 @@ if(cmd.help.perm !== "no") {
                       .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
                   message.channel.send(embed)
                   return
+      }
     } else {
          if(!message.member.hasPermission(cmd.help.perm) && !open.sahip.includes(message.author.id) && cmd.help.perm !=="owner") {
         let pem = cmd.help.perm
@@ -93,7 +94,7 @@ if(cmd.help.perm !== "no") {
                       .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
                   message.channel.send(embed)
                   return
-         }
+         
   }
 }
 }
