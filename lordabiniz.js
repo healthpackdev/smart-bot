@@ -204,8 +204,8 @@ if(sayac.kanal && sayac.hedef) {
   
   else hgmsj = `
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-║<a:gel:769163393717501962> ${member}, Sunucudan Katıldı
-║<a:gel:769163393717501962> **{sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
+║<a:gel:769163393717501962> ${member}, Sunucuya Katıldı
+║<a:gel:769163393717501962> **${sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
 ║<a:gel:769163393717501962> Toplam **${member.guild.memberCount}** Kişi Kaldık
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬`
   if(member.guild.memberCount >= sayac.hedef) {
@@ -319,7 +319,7 @@ if(sayac.kanal && sayac.hedef) {
   else hgmsj = `
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ║<a:git:769163394799501362> ${member}, Sunucudan Ayrıldı
-║<a:git:769163394799501362> **{sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
+║<a:git:769163394799501362> **${sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
 ║<a:git:769163394799501362> Toplam **${member.guild.memberCount}** Kişiyiz
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 `
