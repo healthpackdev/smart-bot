@@ -84,7 +84,7 @@ let kayıtSchema = new KayıtŞema({
   Gender : "<:kadin:769607582318067723>",
   Name :`${isim} | ${yaş}`
 })
-kayıtSchema.save().then(a=>{})  
+await kayıtSchema.save()  
    
 }
 
