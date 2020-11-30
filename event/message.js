@@ -86,7 +86,7 @@ if(cmd.help.perm !== "no") {
 
 
     }
-      if(!message.member.hasPermission(cmd.help.perm) && !open.sahip.includes(message.author.id)) {
+      if(!message.member.hasPermission(cmd.help.perm) && !open.sahip.includes(message.author.id) && cmd.help.perm !=="owner") {
         let pem = cmd.help.perm
         const replaced = pem.replace('MANAGE_MESSAGES','Mesajları yönet').replace('MANAGE_CHANNELS','Kanalları Yönet').replace('VIEW_AUDIT_LOG','Denetim Kaydını Görüntüle').replace('VIEW_GUILD_INSIGHTS','Sunucu Bilgilerini Görüntüle').replace('MANAGE_NICKNAMES','Kullanıcı Adlarını yönet').replace('MANAGE_ROLES','Emojileri Yönet').replace('MANAGE_WEBHOOKS','WebHookları Yönet',).replace('MANAGE_EMOJIS','Emojileri yönet').replace('MENTION_EVERYONE','@everyone pingle').replace('ADMINISTRATOR','Yönetici').replace('MANAGE_GUILD','Sunucuyu Yönet').replace('BAN_MEMBERS','Üyeleri Engelle').replace('KİCK_MEMBERS','Üyeleri at')
       const embed = new Discord.MessageEmbed()
