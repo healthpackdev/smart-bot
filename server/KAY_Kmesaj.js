@@ -88,6 +88,7 @@ if(c.mesaj.embed == true){
     return message.channel.send(new Discord.MessageEmbed().setColor('#4c0ff3').setTitle('***\:scroll: Kayıt Mesajı Ayarlama Menüsü***')
 .setDescription(`
 __Kayıt Kanalına Atılacak Mesajın İçeriği__
+
 <a:mavi1:780047769146228757> **\`Kayıt mesajını Özelleştirmen için Değişkenler:\`**
  
 > \`{user:etiket}\` Gelen Kullanıcıyı ${message.author} Şeklinde Etiketler
@@ -98,14 +99,17 @@ __Kayıt Kanalına Atılacak Mesajın İçeriği__
 > \`{user:kuruluş2}\` Gelen Kullanıcının  \`${userCe}\` Şeklinde K. T.
 > \`{user:tehlike}\` Kullanıcıyı \`30 Günden Az\` Bir Kuruluş ise \`Tehlikeli\` yazar
 > \`{user:durum}\` Gelen Kullanıcının \`Yemek Yiyorum!\` Şeklinde Özel Durumu
+
 > \`{guild:ad}\` Sunucunun \`${message.guild.name}\` Şeklinde adı
 > \`{guild:üye}\` Sunucunun \`${message.guild.memberCount}\` Şeklinde Üye sayısı
 > \`{guild:üye2}\` Sunucunun ${rplc} Şeklinde Üye sayısı
 > \`{guild:yetkili:<ad/id/etiket>}\` Sunucunun Yetkili Rolü ve özellikleri 
 > \`{guild:kayıtsız:<ad/id/etiket>}\` Sunucunun Kayıtsız rolü ve Özellikleri
+
 > \`{random}\` 6 Hoşgeldin Cümlesinden birini atar
+
 **NOT**: **\`Emoji Kullanacaksanız bu sunucuda olmalı\`**
-`).addField('Mesajı Ayarlamak İçin',`\`${p}k-mesaj ayarla <mesaj>\``,true).addField('Eskisine Dönmek için',`\`${p}k-mesaj kapat\``,true).addField('** **','** **').addField('Kayıt Mesajını Embed Yapma',`\`${p}k-mesaj embed\``,true).addField('Embed Rengi Ayarlama',`\`${p}k-mesaj renk #renk-kod\``,true).addField(`Kayıt Embed Gifi`,`\`${p}k-mesaj gif <link>\``,false))
+`).addField('Mesajı Ayarlamak İçin',`\`${p}k-mesaj ayarla <mesaj>\``,true).addField('Eskisine Dönmek için',`\`${p}k-mesaj kapat\``,true).addField('** **','** **').addField('Kayıt Mesajını Embed Yapma',`\`${p}k-mesaj embed\``,true).addField('Embed Rengi Ayarlama',`\`${p}k-mesaj renk #renk-kod\``,true).addField('** **','** **').addField(`Kayıt Embed Gifi`,`\`${p}k-mesaj gif <link>\``,false))
 }
 }
 exports.help = {
