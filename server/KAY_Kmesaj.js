@@ -50,6 +50,21 @@ if(c.mesaj.embed == true){
  client.sendTrue(`Kayıt Mesajı Artık \`<kutulu/embed>\` Olarak **Atılacak.**`,message.channel)
 }
 
+}else if(ne == "gif"){
+    var gif = args[1]
+    let c = await db.findOne({sunucu : message.guild.id})
+    if(c.mesaj.embed == false) return message.channel.send(new Discord.MessageEmbed().setDescription(`<a:olmaz:769202870612131840> | Kayıt Mesajını Embed Yapınız :**${p}k-mesaj embed**`).setColor(open.embedFalse))
+    if(!gif)return client.sendFalse(`Gif Linkini Giriniz. Fotoraf Veya Gif Olabilir\n\n**UYARI:** Eğer Linki Doğru Girmesseniz GIF Gözükmeyecektir.`,message.channel)
+    var rex = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i
+    if(!rex.test(args[1]))return client.sendFalse(`Bu Bir Link Değil`,message.channel)
+
+    await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {"mesaj.gif":args[1]}})
+    const emb = new Discord.MessageEmbed()
+    .setAuthor(message.author.username,message.author.avatarURL({dynamic : true}))
+    .setDescription(`GIF Başarıyla Ayarlandı Eğer Doğru ise Altta Gif Gözükecektir.`)
+    .setImage(args[1])
+    .setColor('BLUE')
+    message.channel.send(emb)
 }else {
   let c = message.guild.memberCount.toLocaleString()
 
