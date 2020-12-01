@@ -6,6 +6,7 @@ let kullaniciSchema = new Schema({
  Erol : {type : String, default : null},
  Krol : {type : String, default : null},
  mesaj : {
+  gif : {type : String,default : null},
    renk : {type : String,default : "BLUE"},
    msj : {type : String,default : null},
   embed : {type : Boolean,default : false}
