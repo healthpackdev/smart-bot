@@ -33,7 +33,7 @@ exports.help = {
     aliases : ['seviye'],
     open : true,
     perm : "MANAGE_GUILD",
-    limit : "0"
+    vote : true
    
 }
 exports.play = {
