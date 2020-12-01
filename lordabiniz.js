@@ -171,8 +171,13 @@ if(created < milisaniye) e = `Tehlikeli`
 
 `
     if(embed) {
-        const embed = new Discord.MessageEmbed().setAuthor(member.user.username).setThumbnail(member.user.avatarURL({dynamic : true, format : "png"}))
-        .setDescription(msj).setColor(renk)
+        const embed = new Discord.MessageEmbed().setAuthor(member.user.username)
+        if(l.mesaj.gif){
+embed.setImage(l.mesaj.gif)
+        } else {
+          embed.setThumbnail(member.user.avatarURL({dynamic : true}))
+        }
+        embed.setDescription(msj).setColor(renk)
      await teyit2.send(`${teyit1}`).then(a => a.delete())
        teyit2.send(embed)     
     } else if(!embed) {
