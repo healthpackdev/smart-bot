@@ -94,7 +94,7 @@ let kayıtsız = l.Karol
 let kayıtkanal = l.Kkanal
 
 let embed = l.mesaj.embed
-let mesaj = l.mesaj.msj,renk = l.mesaj.renk
+let mesaj = l.mesaj.msj,renk = l.mesaj.renk || "RANDOM"
 if(yetkili && kayıtsız && kayıtkanal) {
 let teyit1 = member.guild.roles.cache.get(yetkili)
 let teyit2 = member.guild.channels.cache.get(kayıtkanal)
