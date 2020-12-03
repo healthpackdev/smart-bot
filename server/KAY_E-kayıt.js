@@ -46,6 +46,7 @@ if(message.channel.id !== kayıtkanal) return message.channel.send(embed2)
   
 let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 if(!member)return message.channel.send(embed4)
+  if(member.id == message.guild.owner.id||member.id == client.user.id) return message.reply('Doğru Düzgün Birini Etiketle. beni Veya Sunucu Sahibini Etiketleme')
   if(!member.roles.cache.has(kayıtsız)) return message.channel.send(embed6)
 let isim = args[1]
 let yaş = args[2]
