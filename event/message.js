@@ -75,7 +75,7 @@ if(cmd.help.perm !== "no") {
 
       const embed = new Discord.MessageEmbed()
       .setAuthor('Yetersiz Yetki','https://cdn.discordapp.com/emojis/781470058371219467.png?v=1')
-                      .setDescription(`<a:olmaz:769202870612131840> | Bu Komutu Sadece **<@${message.guild.owner.id}>** Kullanabilir.`)
+                      .setDescription(`Bu Komutu Sadece **<@${message.guild.owner.id}>** Kullanabilir.`)
                        .setColor('#14d2e0')
                       .setTimestamp()
                       .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
