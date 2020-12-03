@@ -45,7 +45,7 @@ client.sendTrue(`Anti Raid Log Kanalı ${ch} Olarak Ayarlandı`,message.channel)
     .addField(`<:sagadogru:769202699434459197>__${p}antiraid log #kanal>__`,`Anti Raid Log Kanalını Ayarlarsınız`)
    
     .setFooter('Anti Raid Sistemi',message.author.avatarURL({dynamic : true}))
-    .setColor('#6db415')
+    .setColor('#d6e4e4')
     if(f.anti.raid){
         antiraid.addField(`<:sagadogru:769202699434459197>__İzin Verilen Botlar__:`,`
         ${f.anti.white.map(a => `\`${a}\``).join("\n")||"**İzin Verilen Herhangi Bir Bot yok.**"}
