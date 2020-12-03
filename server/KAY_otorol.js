@@ -26,7 +26,7 @@ if(ne == "user"||ne == "kullanıcı") {
   .addField(`<a:load:769855808879984660>__${p}otorol user @rol__`,`Otorol Gelen **Bot Olmayan** Kişilere Verilecek Rol`)
   .addField(`<a:load:769855808879984660>__${p}otorol bot @rol__`,'Otorol Gelen **Bot Olan** Kişilere Verilecek Rol')
   .addField(`<a:load:769855808879984660>__${p}otorol kapat__`,`Sistemi Kapatır.`)
-  .setFooter('Otorol Sistemi',message.author.avatarURL({dynamic : true})).setColor('#0e0c0c')
+  .setFooter('Otorol Sistemi',message.author.avatarURL({dynamic : true})).setColor('#d6e4e4')
   message.channel.send(otorol)
 }
 
