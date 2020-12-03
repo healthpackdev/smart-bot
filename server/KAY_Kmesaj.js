@@ -44,7 +44,7 @@ if(c.mesaj.embed == true){
  
  await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {"mesaj.embed":false}})
  client.sendTrue(`Kayıt Mesajı Artık \`<kutulu/embed>\` Olarak **Atılmayacak`,message.channel)
-} else if(c.mesaj.embed == true){
+} else if(c.mesaj.embed == false){
  
  await db.findOneAndUpdate({sunucu : message.guild.id},{$set : {"mesaj.embed":true}})
  client.sendTrue(`Kayıt Mesajı Artık \`<kutulu/embed>\` Olarak **Atılacak.**`,message.channel)
