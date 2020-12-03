@@ -323,7 +323,7 @@ if(sayac.kanal && sayac.hedef) {
 
   else hgmsj = `
 ╔▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-║<a:git:769163394799501362> **${member.user.tag}**, Sunucudan Ayrıldı
+║<a:git:769163394799501362> **\`${member.user.tag}\`**, Sunucudan Ayrıldı
 ║<a:git:769163394799501362> **${sayac.hedef}** Kişi Olmamıza **${kalan}** Kişi Kaldı
 ║<a:git:769163394799501362> Toplam **${member.guild.memberCount}** Kişi Kaldık
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
