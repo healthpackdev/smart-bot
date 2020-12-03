@@ -13,9 +13,9 @@ let size = client.guilds.cache.reduce((a,b) => a  + b.memberCount, 0).toLocaleSt
 
     client.user.setStatus("online");
     var oyun = [
-      `💣| s!yardım | ${client.guilds.cache.size} Sunucu  ${size} Kullanıcı!  `
-  
-     
+      `💣| s!yardım | ${client.guilds.cache.size} Sunucu  ${size} Kullanıcı!`,
+      `💣| s!kontrol kayıt | Kayıt Sistemi çalışmıyorsa Eksiklerinizi Görün!`,
+      `💣| s!prefix ayarla | Prefixi Değişebilirsiniz!`
   ];
         setInterval(function() {
       var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
