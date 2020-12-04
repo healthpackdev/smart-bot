@@ -48,7 +48,7 @@ if(lm.bansistem.log) {
   
   })
 member.ban({reason: sebep}).then(a => {
-  return  message.channel.send(new Discord.MessageEmbed().setAuthor(`${message.author.tag} - ${member.user.tag}`,message.author.avatarURL({format : "png",dynamic : true})).setDescription(`<a:banned:780409577413410857> **|** ${message.author} - **${member.user.tag}**\n Sunucudan Yasaklandı\n\n**${sebep}**`).setColor('#ff0000').setThumbnail(member.user.avatarURL({dynamic : true})))
+  return  message.channel.send(new Discord.MessageEmbed().setAuthor(`${message.author.tag} - ${member.user.tag}`,message.author.avatarURL({format : "png",dynamic : true})).setDescription(`<a:banned:780409577413410857> **|** ${message.author} - **${member.user.tag}**\n\n**${sebep}**`).setColor('#ff0000').setThumbnail(member.user.avatarURL({dynamic : true})))
 }).catch(a => {
   return message.channel.send(`Bir hata Oluştu...`)
 })
