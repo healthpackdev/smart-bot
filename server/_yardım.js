@@ -12,7 +12,7 @@ const yardım = new Discord.MessageEmbed().setAuthor(`Yardım Menüsü`,client.u
 **Güncelleme Bota Geçirildi Fakat Haila Komut Eklenecek. Öneriniz varsa Destek Sunucusuna Gelip Bildirebilirsiniz**
 `)
 .addField(`__<:english:773549662572511253>Bot Komutları__`,`\`${p}yardım bot\``,true)
-.addField(`__<a:mavi1:780047769146228757>Kayıt Komutları__`,`\`${p}yardım Kayıt\``,true).addField('** **','** **')
+.addField(`__<a:mavi1:780047769146228757>Kayıt Komutları__`,`\`${p}yardım kayıt\``,true).addField('** **','** **')
 .addField(`__<a:mavi3:780047770039222283>Kullanıcı Komutları__`,`\`${p}yardım kullanıcı\``,true)
 .addField(`__<a:mavi2:780047771943567400>Moderasyon Komutları__`,`\`${p}yardım moderasyon\``,true).addField('** **','** **')
 .addField(`__<a:altin1:769202952187412532>Prefix Değişmek için__`,`\`${p}prefix ayarla <p>\``,true)
