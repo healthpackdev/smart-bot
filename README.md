@@ -20,7 +20,6 @@ Anahtar | Değer
 **destek** | destek sunucunuzun ID Giriniz 
 **link** | Destek sunucunuzun Sınırsız Davet linki
 **mongo** | MongoDB Veritabanı URL niz almak için [Burayı](https://devnot.com/2019/mongodb-atlas-nedir-ve-nasil-olusturulur) Okuyunuz.
-**dbl** | dbl Api Keyiniz Eğer Botunuz dbl de ekli değilse dblapi.js ile alakalı şeyleri kaldırın nasıl yapacağınızı bi zahmet kendiniz bulun
 
 ## Normal Ayarlar
 ```json
