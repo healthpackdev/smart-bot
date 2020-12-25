@@ -2,9 +2,9 @@
   "name": "Smart",
   "version": "1.6.9",
   "description": "desrcrt",
-  "main": "lordabiniz.js",
+  "main": "smart.js",
   "scripts": {
-    "start": "node lordabiniz.js"
+    "start": "node smart.js"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
