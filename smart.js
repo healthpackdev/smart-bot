@@ -9,7 +9,7 @@ const express = require('express')
 const app = new express()
 const data = require('./database/şema/Sunucu.js')
 const dbl = require('dblapi.js')
-const DBL = new dbl('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2OTExMDYyMDM1OTYyMjY3NiIsImJvdCI6dHJ1ZSwiaWF0IjoxNjA2MDc0OTIxfQ.8EFe4SkOnGxdjd2d_YIvLMeaMw9huHsWzledH_1AVYo',client)
+const DBL = new dbl(open.dbl,client)
 require('events').EventEmitter.prototype._maxListeners = 100;
 require('./loader/eventloader.js')(client)
 app.get("/", (request, response) => {
@@ -35,12 +35,12 @@ helper.start(client,Discord)
 const {otoisim,antiraid}= require('./helpers/guildAdd.js')
 //-----------------------------------------------------------------------------------
 client.on('message', async message => {
-     if(!message.author.id !== "573054368568311808") return; 
+     if(!open.sahip.includes(message.author.id)) return; 
   if (message.content === '.katıl') { 
     client.emit('guildMemberAdd', message.member);
     message.channel.send('Katılış Eventi Tetiklendi.')
       }
-     if(!message.author.id !== "573054368568311808") return; 
+     if(!open.sahip.includes(message.author.id)) return; 
   if (message.content === '.ayrıl') { // 
     client.emit('guildMemberRemove', message.member);
    message.channel.send('Çıkış Eventi Tetiklendi.')
@@ -60,7 +60,7 @@ try {
   .addField('Rol sayısı',guild.roles.cache.size)
   .addField('Emoji Sayısı',guild.emojis.cache.size,true)
   .addField('Owner Ad',guild.owner.user.username).setColor('GREEN')
-  client.guilds.cache.get('769112096683065344').channels.cache.get('769637900853444640').send(emb)
+  client.guilds.cache.get(open.destek).channels.cache.get('eklendim atıldım id').send(emb)
   
   } catch(e) {
   console.error(e)
@@ -76,7 +76,7 @@ client.on('guildDelete',async (guild) => {
   .addField('Rol sayısı',guild.roles.cache.size)
   .addField('Emoji Sayısı',guild.emojis.cache.size,true)
    .addField('Owner Ad',guild.owner.user.username).setColor('RED')
-  client.guilds.cache.get('769112096683065344').channels.cache.get('769637900853444640').send(emb)
+  client.guilds.cache.get(open.destek).channels.cache.get('eklendim atıldım id').send(emb)
     if(guild){
 await data.findOneAndDelete({sunucu : guild.id})
     }
