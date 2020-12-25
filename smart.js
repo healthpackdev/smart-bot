@@ -9,7 +9,7 @@ const express = require('express')
 const app = new express()
 const data = require('./database/şema/Sunucu.js')
 const dbl = require('dblapi.js')
-const DBL = new dbl(open.dbl,client)
+
 require('events').EventEmitter.prototype._maxListeners = 100;
 require('./loader/eventloader.js')(client)
 app.get("/", (request, response) => {
@@ -19,9 +19,7 @@ app.get("/", (request, response) => {
 app.listen(process.env.PORT || 3000);
 
 
-DBL.on('posted', () => {
-  console.log('Sunucu Sayısı Gönderildi.');
-})
+
  client.login(open.token).then(a => {
   console.log('Bot Başlatılıyor...')}).catch(a => {
   return console.error('Token Yanlış.')
