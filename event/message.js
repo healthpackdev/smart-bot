@@ -1,13 +1,12 @@
 const open = require('../open.json');
 const ş = require('../database/şema/Sunucu.js')
 const Discord = require('discord.js')
-const dbl = require('dblapi.js')
+
 module.exports = async message => {
 let client = message.client
-const DBL = new dbl(open.dbl,client)
 if(!message.guild) return;
 if (message.author.bot) return;
-if(message.guild.id == "439866052684283905") return;
+
 let me = await ş.findOne({sunucu : message.guild.id})
 if(!me){
      const e = new ş({sunucu : message.guild.id})
@@ -46,16 +45,11 @@ if(liste.some(user => message.author.id == user)){
   .setTitle('Kara Listedesin')
   .setDescription(`Kara Listedesin Hiç bir Komutu Kullanmana İzin vermem`)
   .setColor('BLUE')
-  .addField(`Açtırmak İçin`,`Destek Sunucumuza gelip Dilenebilirsiniz XD [Tıkla](https://discord.gg/bMC8tGr)`)
+  .addField(`Açtırmak İçin`,`Destek Sunucumuza gelip Dilenebilirsiniz XD [Tıkla](${open.link})`)
   .setFooter(message.author.username,message.author.avatarURL({dynamic : true}))
 return message.channel.send(kara)
 }
-if(cmd.help.vote == true){
 
-  let vote= await DBL.hasVoted(message.author.id)
-  if(!vote) return message.channel.send(new Discord.MessageEmbed().setColor(open.embedFalse).setDescription(`<a:altin4:769202952157790298>**Bu Komutu Kullanabilmek için Bota 12 Saatte bir Oy vermelisin** <a:altin4:769202952157790298> \n\n [Oy Ver](https://top.gg/bot/769110620359622676/vote) Verdikten Sonra 2-3dk Bekleyiniz.`))
-  
-}
 
     if (cmd.help.open[0] == false) {
         if(!open.sahip.includes(message.author.id)) {
@@ -103,7 +97,7 @@ if(cmd.help.perm !== "no") {
   
       } catch(e) {
     const hata = new Discord.MessageEmbed().setColor(open.embedFalse)
-    .setDescription(`\`${e}\` \n\n Hata için Destek sunucumuza gelebilirsin. [Link](https://discord.gg/bMC8tGr)`)
+    .setDescription(`\`${e}\` \n\n Hata için Destek sunucumuza gelebilirsin. [Link](${open.link})`)
     .setFooter(open.bot,client.user.avatarURL({dynamic : true, format :"png"}))
   message.channel.send(hata)
             return
