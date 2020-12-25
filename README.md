@@ -1,7 +1,4 @@
-
-> Selam ben `Yasin` Smartın Altyapısını Paylaşıyorum 
-
-> Boş Beleş Yapmicam Direk Kurulumdan Bahsediyim Umarım İşinize Yarar Altyapı
+> Lrows ve ???
 
 Tarih **2020.12.25 23.06** 
 
@@ -33,7 +30,6 @@ Anahtar | Değer
     "destek" : "769144446154571776",
     "link" : "https://discord.gg/bMC8tGr",
     "mongo" : "mongodb+srv://username:sifre@cluster0.q972g.mongodb.net/dbadi",
-    "dbl" : "BU KENDİ KEYİNİZ OLMALI"
 }
 ```
 
