@@ -8,8 +8,6 @@ const http = require('http')
 const express = require('express')
 const app = new express()
 const data = require('./database/şema/Sunucu.js')
-const dbl = require('dblapi.js')
-
 require('events').EventEmitter.prototype._maxListeners = 100;
 require('./loader/eventloader.js')(client)
 app.get("/", (request, response) => {
