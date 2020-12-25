@@ -13,7 +13,7 @@ const DBL = new dbl(open.dbl,client)
 require('events').EventEmitter.prototype._maxListeners = 100;
 require('./loader/eventloader.js')(client)
 app.get("/", (request, response) => {
-  console.log(Date.now() + "7/24 AKTİF TUTMA İŞLEMİ BAŞARILI H.O");
+  console.log(Date.now() + "İstek Alındı ve Proje Ayakta Durdu (Heroku ve Glitch Gibi Platformlar için lazım)");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT || 3000);
