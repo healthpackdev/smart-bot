@@ -1,7 +1,7 @@
 {
   "name": "Smart",
   "version": "1.6.9",
-  "description": "desrcrt",
+  "description": "lrows",
   "main": "smart.js",
   "scripts": {
     "start": "node smart.js"
@@ -27,7 +27,6 @@
     "parse-ms": "^2.1.0",
     "ms" : "^2.1.2",
     "hex-color-regex": "^1.1.0",
-    "dblapi.js": "^2.4.1",
     "quickmongo": "^2.0.5",
     "discord-canvas": "^1.3.2"
   },
