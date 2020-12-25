@@ -45,4 +45,4 @@ Nasıl Yapacağınızı Araştırın... Her zaman Araştırın... Gelişin...
 <hr>
 
 ### Botta hata var
-**Yardım Almak İçin [Wenzy]() Gelip ``#💡・sorun-çözüm`` kanalından Yardım Alabilirsiniz.**
+**Yardım Almak İçin [Wenzy](https://discord.gg/Qfj3FRM) Gelip ``#💡・sorun-çözüm`` kanalından Yardım Alabilirsiniz.**
