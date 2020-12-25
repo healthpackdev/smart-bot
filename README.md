@@ -44,8 +44,5 @@ Nasıl Yapacağınızı Araştırın... Her zaman Araştırın... Gelişin...
 
 <hr>
 
-### Lisans
-Herhangi bir lisans bulunmuyor isteyen paylaşsın kullansın 
-
 ### Botta hata var
-**Altyapıda Hata yok Eğer gidipte 3-2 Ay Sonra Geldiyseniz belki altyapının kullandığı Modül veya kütüphaneler Güncelleme Almış Olabilir hata Konusunda Yardım Almak İçin Başka Sunuculara başvurunuz**
+**Yardım Almak İçin [Wenzy]() Gelip ``#💡・sorun-çözüm`` kanalından Yardım Alabilirsiniz.**
