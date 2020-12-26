@@ -1,9 +1,9 @@
 Smartın Altyapısını Paylaşıyorum.
-
 Tarih **2020.12.25 23.06** 
-
-
 Projeyi Yükleyip open.jsonu doldurunuz 
+
+### Beni Followlamayı ve Projeyi Starlamayı Unutmayın!
+
 ## Kurulum(Belirtilen Yerleri Doldurma)
 1. Öncelikle [open.json](https://github.com/healthpackTR/SmartYeni/blob/main/open.json)'daki ayarlardan Bahsedeyim.
 
