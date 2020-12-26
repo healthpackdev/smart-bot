@@ -1,15 +1,9 @@
-> Lrows ve ???
+Smartın Altyapısını Paylaşıyorum.
 
 Tarih **2020.12.25 23.06** 
 
-## Kurulum(Projeyi Kendinizin Yapma)
 
-* Download Zip Diyerek Projeyi Bilgisayarınıza Yükleyin
-
-![Yukle](https://i.hizliresim.com/DMza0x.png)
-
-* İndirdikten sonra Zipe Sağtıklayıp **Bu Klosöre Ayıkla**
-
+Projeyi Yükleyip open.jsonu doldurunuz 
 ## Kurulum(Belirtilen Yerleri Doldurma)
 1. Öncelikle [open.json](https://github.com/healthpackTR/SmartYeni/blob/main/open.json)'daki ayarlardan Bahsedeyim.
 
@@ -45,9 +39,6 @@ Anahtar | Değer
 
 ## Kurulum(Botu Aktif etme)
 
-Botu 7/24 Aktif Etmek İçin [Heroku](https://heroku.com) Kullanacağız 
+Botu 7/24 Aktif Etmek İçin [Heroku](https://heroku.com) Kullanabilirsiniz
 
-2. Nasıl Aktif Edeceğinizi Yazalım.
-
-
-
+Nasıl Aktif Edeceğiniz Size Kalmış 
