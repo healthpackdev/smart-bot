@@ -2,8 +2,15 @@
 
 Tarih **2020.12.25 23.06** 
 
+## Kurulum(Projeyi Kendinizin Yapma)
 
-## Kurulum
+* Download Zip Diyerek Projeyi Bilgisayarınıza Yükleyin
+
+![Yukle](https://i.hizliresim.com/DMza0x.png)
+
+* İndirdikten sonra Zipe Sağtıklayıp **Bu Klosöre Ayıkla**
+
+## Kurulum(Belirtilen Yerleri Doldurma)
 1. Öncelikle [open.json](https://github.com/healthpackTR/SmartYeni/blob/main/open.json)'daki ayarlardan Bahsedeyim.
 
 Anahtar | Değer
@@ -36,13 +43,11 @@ Anahtar | Değer
 **buraları Yaptıktan Sonra [smart.js](https://github.com/healthpackTR/SmartYeni/blob/main/smart.js)'deki Belirtilen Bazı Yerleri Doldurunuz**
 <hr>
 
-## Çalıştırma
+## Kurulum(Botu Aktif etme)
 
-**Çalıştırmak için Glitch/Heroku Gibi Platformlardan 7/24 Aktif edebilirsiniz**
+Botu 7/24 Aktif Etmek İçin [Heroku](https://heroku.com) Kullanacağız 
 
-Nasıl Yapacağınızı Araştırın... Her zaman Araştırın... Gelişin...
+2. Nasıl Aktif Edeceğinizi Yazalım.
 
-<hr>
 
-### Botta hata var
-**Yardım Almak İçin [Wenzy](https://discord.gg/Qfj3FRM) Gelip ``#💡・sorun-çözüm`` kanalından Yardım Alabilirsiniz.**
+
