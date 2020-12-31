@@ -1,7 +1,8 @@
 const Discord = require("discord.js")
 const ms = require("parse-ms");
 const { Database } = require("quickmongo");
-const db2 = new Database("mongodb+srv://health:6515320a@cluster0.q972g.mongodb.net/SM");
+var open = require('../open.json')
+const db2 = new Database(open.mongo);
 exports.run = async function(client,message,args,p,db){
 const timeout = 86400000 
 const lm = await db.findOne({sunucu : message.guild.id})
