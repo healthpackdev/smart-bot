@@ -9,7 +9,7 @@ Projeyi Yükleyip open.jsonu doldurunuz
 
 Anahtar | Değer
 ------------ | -------------
-**token** | Botunuzun Tokeni
+**token** | Botunuzun Tokeni (BOTUNUZUN PRİVİLEGED **İNTENTS**LERİNİ AÇINIZ)
 **sahip** | sahip ID Giriniz ```["1. id","2. id"]``` Gibi
 **prefix** | İstediğiniz Prefixi Giriniz
 **embedFalse** | Tüm Hata Embedlerinin Rengi Kırmızı Yapabilirsiniz ``#e02727`` Gibi
